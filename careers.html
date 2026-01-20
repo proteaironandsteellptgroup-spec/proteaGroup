@@ -1,15 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>Careers</title></head>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Careers | Protea Iron and Steel Group</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f4f6f7;
+  color: #111;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  z-index: 10;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 14px;
+}
+
+/* Hero */
+.hero {
+  height: 60vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/careers-hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  max-width: 700px;
+  line-height: 1.1;
+}
+
+/* Section */
+.section {
+  padding: 120px 8vw;
+}
+
+.section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 24px;
+}
+
+.section p {
+  max-width: 720px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Values */
+.values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.value {
+  background: #fff;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.value h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+/* Roles */
+.roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.role {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.role h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.role p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* CTA */
+.cta {
+  margin-top: 100px;
+  background: #111;
+  color: #fff;
+  padding: 80px 8vw;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.cta p {
+  max-width: 720px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+.cta a {
+  display: inline-block;
+  background: #f5d300;
+  color: #111;
+  padding: 14px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 40px;
+}
+</style>
+</head>
+
 <body>
 
-<h1>Careers at Protea</h1>
-<p>
-We offer opportunities across mining, engineering, metallurgy, logistics, and corporate
-functions worldwide.
-</p>
+<header>
+  <strong>Protea Iron and Steel Group</strong>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="operations.html">Operations</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
 
-<a href="index.html">← Back to Home</a>
+<!-- Hero -->
+<section class="hero">
+  <h1>Building the Future of Global Metals and Resources</h1>
+</section>
+
+<!-- Culture -->
+<section class="section">
+  <h2>Life at Protea</h2>
+  <p>
+    At Protea Iron and Steel Group, we are driven by technical excellence,
+    operational discipline, and a commitment to safety and responsibility.
+    Our people work across continents, cultures, and disciplines to support
+    critical industries worldwide.
+  </p>
+
+  <div class="values">
+    <div class="value">
+      <h3>Safety First</h3>
+      <p>
+        We maintain the highest safety standards across all operations and
+        believe every incident is preventable.
+      </p>
+    </div>
+
+    <div class="value">
+      <h3>Global Collaboration</h3>
+      <p>
+        Our teams operate across Africa, Europe, and North America, fostering
+        diverse perspectives and shared expertise.
+      </p>
+    </div>
+
+    <div class="value">
+      <h3>Technical Excellence</h3>
+      <p>
+        We invest continuously in engineering, processing technology, and
+        professional development.
+      </p>
+    </div>
+
+    <div class="value">
+      <h3>Long-Term Responsibility</h3>
+      <p>
+        Sustainability, environmental stewardship, and ethical governance
+        guide our decisions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Roles -->
+<section class="section">
+  <h2>Career Opportunities</h2>
+  <p>
+    We recruit experienced professionals and emerging talent across a wide
+    range of technical, operational, and corporate disciplines.
+  </p>
+
+  <div class="roles">
+    <div class="role">
+      <h3>Mining & Operations</h3>
+      <p>
+        Mine planning, production, processing, maintenance, and site
+        operations roles across global assets.
+      </p>
+    </div>
+
+    <div class="role">
+      <h3>Engineering & Technical</h3>
+      <p>
+        Mechanical, electrical, metallurgical, and process engineering
+        positions supporting advanced operations.
+      </p>
+    </div>
+
+    <div class="role">
+      <h3>Logistics & Supply Chain</h3>
+      <p>
+        Global logistics, shipping, procurement, and supply chain
+        optimization roles.
+      </p>
+    </div>
+
+    <div class="role">
+      <h3>Commercial & Trading</h3>
+      <p>
+        Sales, marketing, trading, and market analysis roles serving
+        international customers.
+      </p>
+    </div>
+
+    <div class="role">
+      <h3>Corporate & Support Functions</h3>
+      <p>
+        Finance, legal, compliance, human resources, and corporate governance
+        positions.
+      </p>
+    </div>
+
+    <div class="role">
+      <h3>Graduate & Early Careers</h3>
+      <p>
+        Graduate programs, internships, and early-career pathways designed to
+        develop future leaders.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Join Our Global Team</h2>
+  <p>
+    If you are interested in opportunities at Protea Iron and Steel Group,
+    please contact our recruitment team. Qualified candidates will be
+    contacted for further discussion.
+  </p>
+  <a href="contact.html">Submit Your Enquiry</a>
+</section>
+
+<footer>
+  © 2026 Protea Iron and Steel Group
+</footer>
+
 </body>
 </html>
+
 

@@ -1,151 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us | Protea Iron and Steel Group</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Protea Iron and Steel Group</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #f4f6f7;
-      color: #111;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f4f6f7;
+  color: #111;
+}
 
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 64px;
-      background: rgba(0,0,0,0.85);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 32px;
-      z-index: 10;
-    }
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  z-index: 10;
+}
 
-    header a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 24px;
-      font-size: 14px;
-    }
+header a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 14px;
+}
 
-    main {
-      padding-top: 96px;
-      padding-bottom: 120px;
-    }
+/* Page */
+.page {
+  padding: 120px 8vw;
+}
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 8vw;
-    }
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 40px;
+}
 
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 32px;
-    }
+.office {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px;
+  margin-bottom: 48px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
 
-    .office {
-      background: #fff;
-      border-radius: 14px;
-      padding: 32px;
-      margin-bottom: 48px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-    }
+.office h2 {
+  margin-top: 0;
+}
 
-    .office h2 {
-      margin-top: 0;
-      font-size: 1.6rem;
-    }
+.office p {
+  line-height: 1.7;
+}
 
-    .office p {
-      line-height: 1.7;
-      color: #333;
-    }
+.office a {
+  color: #111;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
-    .office a {
-      color: #111;
-      text-decoration: underline;
-      cursor: pointer;
-    }
+.map {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
 
-    .map {
-      margin-top: 24px;
-      height: 280px;
-      border-radius: 12px;
-      overflow: hidden;
-    }
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+}
 
-    .map iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+.modal.active {
+  display: flex;
+}
 
-    /* Floating Form */
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-    }
+.modal-content {
+  background: #fff;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 14px;
+  padding: 32px;
+  position: relative;
+}
 
-    .form-card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 48px;
-      width: 100%;
-      max-width: 520px;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.25);
-    }
+.modal-content h3 {
+  margin-top: 0;
+}
 
-    .form-group {
-      margin-bottom: 20px;
-    }
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
 
-    label {
-      display: block;
-      font-size: 14px;
-      margin-bottom: 6px;
-      color: #444;
-    }
+.modal-content button {
+  background: #f5d300;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-    input, textarea {
-      width: 100%;
-      padding: 14px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 15px;
-    }
-
-    textarea {
-      min-height: 120px;
-    }
-
-    button {
-      background: #111;
-      color: #fff;
-      border: none;
-      padding: 14px 32px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 40px;
-    }
-  </style>
+.close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 20px;
+  cursor: pointer;
+}
+</style>
 </head>
 
 <body>
@@ -161,88 +143,135 @@
   </nav>
 </header>
 
-<main>
-  <div class="container">
-    <h1>Contact Us</h1>
+<div class="page">
+<h1>Global Offices</h1>
 
-    <!-- SOUTH AFRICA FIRST -->
-    <div class="office">
-      <h2>South Africa – Cape Town (Head Office)</h2>
-      <p>
-        Phone:
-        <a onclick="openForm()">+1 616 255 9910</a> /
-        <a onclick="openForm()">+1 929 494 9248</a><br>
-        Email:
-        <a onclick="openForm()">proteaironandsteellptgroup@outlook.com</a> /
-        <a onclick="openForm()">proteaironandsteellptgroup@gmail.com</a>
-      </p>
-      <div class="map">
-        <iframe src="https://maps.google.com/maps?q=Cape%20Town%20South%20Africa&z=10&output=embed"></iframe>
-      </div>
-    </div>
+<!-- SOUTH AFRICA -->
+<div class="office">
+<h2>South Africa</h2>
 
-    <div class="office">
-      <h2>South Africa – Johannesburg</h2>
-      <p>Phone: <a onclick="openForm()">+27 11 784 2201</a></p>
-      <div class="map">
-        <iframe src="https://maps.google.com/maps?q=Johannesburg%20South%20Africa&z=10&output=embed"></iframe>
-      </div>
-    </div>
+<p><strong>Cape Town</strong><br>
+Phone: <a onclick="openModal()">+1 616 255 9910</a> / <a onclick="openModal()">+1 929 494 9248</a><br>
+Email: <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
 
-    <div class="office">
-      <h2>United States – New York</h2>
-      <p>Phone: <a onclick="openForm()">+1 929 494 9248</a></p>
-      <div class="map">
-        <iframe src="https://maps.google.com/maps?q=New%20York%20USA&z=10&output=embed"></iframe>
-      </div>
-    </div>
-  </div>
-</main>
+<p><strong>Johannesburg</strong><br>
+Phone: <a onclick="openModal()">+27 11 589 4200</a><br>
+Email: <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
 
-<!-- Floating Enquiry Form -->
-<div class="overlay" id="overlay">
-  <div class="form-card">
-    <h2>Send an Enquiry</h2>
-    <form onsubmit="submitForm(event)">
-      <div class="form-group">
-        <label>Name</label>
-        <input required>
-      </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" required>
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea required></textarea>
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+<p><strong>Durban</strong><br>
+Phone: <a onclick="openModal()">+27 31 301 8000</a><br>
+Email: <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+
+<p><strong>Pretoria</strong><br>
+Phone: <a onclick="openModal()">+27 12 384 5600</a><br>
+Email: <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+
+<div class="map">
+<iframe src="https://www.google.com/maps?q=Cape+Town+South+Africa&output=embed"
+width="100%" height="300" loading="lazy"></iframe>
+</div>
+</div>
+
+<!-- UNITED STATES -->
+<div class="office">
+<h2>United States</h2>
+
+<p><strong>New York</strong><br>
+Phone: <a onclick="openModal()">+1 929 494 9248</a><br>
+Email: <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+
+<p><strong>California</strong><br>
+Phone: <a onclick="openModal()">+1 415 782 6100</a><br>
+Email: <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+
+<p><strong>Washington</strong><br>
+Phone: <a onclick="openModal()">+1 202 735 8800</a><br>
+Email: <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+
+<div class="map">
+<iframe src="https://www.google.com/maps?q=New+York+USA&output=embed"
+width="100%" height="300"></iframe>
+</div>
+</div>
+
+<!-- GERMANY -->
+<div class="office">
+<h2>Germany</h2>
+
+<p><strong>Berlin</strong><br>
+Phone: <a onclick="openModal()">+49 30 8892 4400</a><br>
+Email: <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+
+<p><strong>Munich</strong><br>
+Phone: <a onclick="openModal()">+49 89 5419 2200</a><br>
+Email: <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+
+<div class="map">
+<iframe src="https://www.google.com/maps?q=Berlin+Germany&output=embed"
+width="100%" height="300"></iframe>
+</div>
+</div>
+
+<!-- UNITED KINGDOM -->
+<div class="office">
+<h2>United Kingdom</h2>
+
+<p><strong>London</strong><br>
+Phone: <a onclick="openModal()">+44 20 7798 1700</a><br>
+Email: <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+
+<div class="map">
+<iframe src="https://www.google.com/maps?q=London+UK&output=embed"
+width="100%" height="300"></iframe>
+</div>
+</div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <h3>Contact Enquiry</h3>
+    <input placeholder="Your full name">
+    <input placeholder="Your email">
+    <input placeholder="Your phone number">
+    <textarea rows="4" placeholder="Your message"></textarea>
+    <button>Submit</button>
   </div>
 </div>
 
-<footer>
-  © 2026 Protea Iron and Steel Group
-</footer>
-
 <script>
-  function openForm() {
-    document.getElementById("overlay").style.display = "flex";
-  }
-
-  function submitForm(e) {
-    e.preventDefault();
-    alert("Thank you for your enquiry. Our team will contact you shortly.");
-    document.getElementById("overlay").style.display = "none";
-  }
-
-  document.getElementById("overlay").addEventListener("click", function(e) {
-    if (e.target === this) this.style.display = "none";
-  });
+function openModal() {
+  document.getElementById('modal').classList.add('active');
+}
+function closeModal() {
+  document.getElementById('modal').classList.remove('active');
+}
 </script>
 
 </body>
 </html>
+
 
 
 

@@ -1,189 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Protea Iron and Steel Group</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Protea Iron and Steel Group</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      color: #111;
-    }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #111;
+  line-height: 1.7;
+}
 
-    /* ================= Header ================= */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 64px;
-      background: rgba(0, 0, 0, 0.75);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 32px;
-      z-index: 100;
-    }
+/* ================= Header ================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  z-index: 100;
+}
 
-    header nav {
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-    }
+header nav {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
 
-    header a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 24px;
-      font-size: 14px;
-      font-weight: 500;
-    }
+header a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 14px;
+  font-weight: 500;
+}
 
-    /* ================= Hero ================= */
-    .hero {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-    }
+/* ================= Hero ================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
 
-    .hero-video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      z-index: 1;
-    }
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
 
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.45);
-      z-index: 2;
-    }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 2;
+}
 
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      padding-left: 10%;
-    }
+.hero-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+}
 
-    .hero-content h1 {
-      color: #fff;
-      font-size: clamp(2.8rem, 5vw, 4.8rem);
-      max-width: 820px;
-      line-height: 1.1;
-    }
+.hero-content h1 {
+  color: #fff;
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  max-width: 820px;
+  line-height: 1.1;
+}
 
-    /* ================= Sections ================= */
-    section {
-      padding: 120px 0;
-    }
+/* ================= Sections ================= */
+section {
+  padding: 120px 0;
+}
 
-    section.light {
-      background: #f6f6f6;
-    }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8vw;
+}
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 8vw;
-    }
+h2 {
+  font-size: 2.6rem;
+  margin-bottom: 32px;
+}
 
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 80px;
-    }
+p {
+  max-width: 760px;
+  font-size: 1.05rem;
+}
 
-    .two-col h2 {
-      font-size: 2.4rem;
-      margin: 0;
-    }
+/* ================= Cards ================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 56px;
+}
 
-    .two-col p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      max-width: 680px;
-    }
+.card {
+  position: relative;
+  min-height: 300px;
+  padding: 40px 32px;
+  border-radius: 14px;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
 
-    /* ================= Cards ================= */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      margin-top: 64px;
-    }
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+  transition: background 0.3s ease;
+}
 
-    .card {
-      position: relative;
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      min-height: 280px;
-      padding: 40px 32px;
-      border-radius: 12px;
-      overflow: hidden;
-    }
+.card:hover::before {
+  background: rgba(0,0,0,0.6);
+}
 
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.45);
-      z-index: 1;
-    }
+.card * {
+  position: relative;
+  z-index: 2;
+}
 
-    .card * {
-      position: relative;
-      z-index: 2;
-    }
+.card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
 
-    .card h3 {
-      margin-top: 0;
-      font-size: 1.5rem;
-    }
+/* Card backgrounds */
+.card.aluminum {
+  background-image: url("images/aluminum.jpg");
+}
 
-    /* Placeholder backgrounds (you can replace later) */
-    .steel { background: linear-gradient(135deg, #333, #555); }
-    .energy { background: linear-gradient(135deg, #2c3e50, #34495e); }
-    .infrastructure { background: linear-gradient(135deg, #444, #666); }
+.card.energy {
+  background-image: url("images/energy.jpg");
+}
 
-    /* ================= Footer ================= */
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 40px;
-      font-size: 14px;
-    }
+.card.infrastructure {
+  background-image: url("images/infrastructure.jpg");
+}
 
-    /* ================= Responsive ================= */
-    @media (max-width: 900px) {
-      .two-col {
-        grid-template-columns: 1fr;
-      }
+/* ================= Footer ================= */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+}
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
+/* ================= Responsive ================= */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 
-      .hero-content {
-        padding-left: 8vw;
-      }
-    }
-  </style>
+  .hero-content {
+    padding-left: 8vw;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -191,10 +191,10 @@
 <header>
   <strong>Protea Iron and Steel Group</strong>
   <nav>
-    <a href="#about">About Us</a>
-    <a href="#operations">Operations</a>
-    <a href="#careers">Careers</a>
-    <a href="#contact">Contact Us</a>
+    <a href="about.html">About Us</a>
+    <a href="operations.html">Operations</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html">Contact Us</a>
   </nav>
 </header>
 
@@ -209,7 +209,6 @@
     poster="hero.jpg"
   >
     <source src="hero.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
   </video>
 
   <div class="hero-overlay"></div>
@@ -219,102 +218,38 @@
   </div>
 </div>
 
-<!-- ================= About ================= -->
-<section id="about" class="light">
-  <div class="container two-col">
+<!-- ================= Who We Are ================= -->
+<section>
+  <div class="container">
     <h2>Who We Are</h2>
     <p>
-      Protea Iron and Steel Group is a diversified industrial group focused on
-      responsible steel processing, resource supply, and long-term value
-      creation across global markets.  
-      <br /><br />
-      Our operations are built on safety, sustainability, disciplined capital
-      allocation, and long-standing partnerships with customers across
-      infrastructure, manufacturing, and energy sectors.
+      Protea Iron and Steel Group is a global metals and mining enterprise focused on
+      responsible resource development, industrial excellence, and long-term value
+      creation across international markets.
     </p>
-  </div>
-</section>
-
-<!-- ================= Operations ================= -->
-<section id="operations">
-  <div class="container">
-    <h2>Our Operations</h2>
 
     <div class="cards">
-      <div class="card steel">
-        <h3>Steel Processing</h3>
-        <p>
-          Advanced processing and distribution of high-grade steel products
-          serving construction, manufacturing, and industrial applications.
-        </p>
+      <div class="card aluminum">
+        <h3>Aluminum Processing</h3>
+        <p>Military-grade and aerospace-grade aluminum products.</p>
       </div>
 
       <div class="card energy">
         <h3>Energy & Resources</h3>
-        <p>
-          Supporting energy-intensive industries through efficient sourcing,
-          logistics coordination, and long-term supply relationships.
-        </p>
+        <p>Supplying critical materials for energy-intensive industries.</p>
       </div>
 
       <div class="card infrastructure">
         <h3>Infrastructure Supply</h3>
-        <p>
-          Delivering materials and solutions for large-scale infrastructure
-          projects across emerging and developed markets.
-        </p>
+        <p>Supporting large-scale infrastructure worldwide.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ================= Careers ================= -->
-<section id="careers" class="light">
-  <div class="container two-col">
-    <h2>Careers</h2>
-    <p>
-      We believe our people are central to our long-term success.
-      <br /><br />
-      Protea Iron and Steel Group offers opportunities across operations,
-      engineering, logistics, commercial management, and corporate functions.
-      We value integrity, accountability, and continuous improvement.
-      <br /><br />
-      Interested candidates are encouraged to contact us with a brief
-      introduction and relevant experience.
-    </p>
-  </div>
-</section>
-
-<!-- ================= Contact ================= -->
-<section id="contact">
-  <div class="container two-col">
-    <h2>Contact Us</h2>
-    <p>
-      For general inquiries, partnership opportunities, or career-related
-      questions, please reach out to us:
-      <br /><br />
-      <strong>Email:</strong> info@proteagroup.com  
-      <br />
-      <strong>Business Inquiries:</strong> partnerships@proteagroup.com
-      <br /><br />
-      Our team will respond as promptly as possible.
-    </p>
   </div>
 </section>
 
 <footer>
   © 2026 Protea Iron and Steel Group
 </footer>
-
-<script>
-  const overlay = document.querySelector('.hero-overlay');
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const opacity = Math.min(0.6, scrollY / 600);
-    overlay.style.background = `rgba(0, 0, 0, ${0.25 + opacity})`;
-  });
-</script>
 
 </body>
 </html>

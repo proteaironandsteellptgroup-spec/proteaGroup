@@ -1,30 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Operations – Protea Group</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Operations | Protea Iron and Steel Group</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f4f6f7;
+  color: #111;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  z-index: 10;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 14px;
+}
+
+/* Hero */
+.hero {
+  height: 60vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/operations-hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  max-width: 700px;
+  line-height: 1.1;
+}
+
+/* Section */
+.section {
+  padding: 120px 8vw;
+}
+
+.section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 24px;
+}
+
+.section p {
+  max-width: 720px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Cards */
+.cards {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  position: relative;
+  height: 260px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.card-content {
+  position: relative;
+  padding: 24px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.card p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* Background Images */
+.aluminum { background-image: url("images/aluminum.jpg"); }
+.steel { background-image: url("images/steel.jpg"); }
+.copper { background-image: url("images/copper.jpg"); }
+.nickel { background-image: url("images/nickel.jpg"); }
+.zinc { background-image: url("images/zinc.jpg"); }
+.ironore { background-image: url("images/iron-ore.jpg"); }
+.manganese { background-image: url("images/manganese.jpg"); }
+.chromium { background-image: url("images/chromium.jpg"); }
+.rare { background-image: url("images/rare-metals.jpg"); }
+.energy { background-image: url("images/energy.jpg"); }
+.logistics { background-image: url("images/logistics.jpg"); }
+.infrastructure { background-image: url("images/infrastructure.jpg"); }
+
+/* Footer */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding-left: 8vw;
+  }
+}
+</style>
 </head>
+
 <body>
 
-<h1>Our Operations</h1>
+<header>
+  <strong>Protea Iron and Steel Group</strong>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="operations.html">Operations</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
 
-<ul>
-<li>Primary Aluminum Ingots</li>
-<li>Specialty Aluminum Alloys</li>
-<li>Structural Steel Products</li>
-<li>High-Strength Steel Plates</li>
-<li>Military-Grade Steel</li>
-<li>Medical-Grade Metals</li>
-<li>Aerospace Alloys</li>
-<li>Refined Copper Cathodes</li>
-<li>Zinc Concentrates</li>
-<li>Nickel-Based Alloys</li>
-<li>Industrial Metal Powders</li>
-<li>Custom Metal Solutions</li>
-</ul>
+<!-- Hero -->
+<section class="hero">
+  <h1>Integrated Operations Across the Global Metals Value Chain</h1>
+</section>
 
-<a href="index.html">← Back to Home</a>
+<!-- Overview -->
+<section class="section">
+  <h2>Our Operations</h2>
+  <p>
+    Protea Iron and Steel Group operates a fully integrated metals and resources
+    platform covering exploration, extraction, processing, logistics, and global
+    trading. Our diversified portfolio ensures resilient supply chains and consistent
+    delivery of high-grade materials to industrial, defense, medical, and aerospace
+    sectors worldwide.
+  </p>
+
+  <!-- Cards -->
+  <div class="cards">
+
+    <div class="card aluminum">
+      <div class="card-content">
+        <h3>Aluminum</h3>
+        <p>Military-grade and aerospace-grade aluminum processing and supply.</p>
+      </div>
+    </div>
+
+    <div class="card steel">
+      <div class="card-content">
+        <h3>Steel</h3>
+        <p>High-strength structural and specialty steel products.</p>
+      </div>
+    </div>
+
+    <div class="card copper">
+      <div class="card-content">
+        <h3>Copper</h3>
+        <p>Refined copper for energy, electronics, and infrastructure.</p>
+      </div>
+    </div>
+
+    <div class="card nickel">
+      <div class="card-content">
+        <h3>Nickel</h3>
+        <p>Battery-grade and industrial nickel supply.</p>
+      </div>
+    </div>
+
+    <div class="card zinc">
+      <div class="card-content">
+        <h3>Zinc</h3>
+        <p>Corrosion-resistant zinc for industrial applications.</p>
+      </div>
+    </div>
+
+    <div class="card ironore">
+      <div class="card-content">
+        <h3>Iron Ore</h3>
+        <p>High-quality iron ore for global steelmakers.</p>
+      </div>
+    </div>
+
+    <div class="card manganese">
+      <div class="card-content">
+        <h3>Manganese</h3>
+        <p>Critical alloying material for steel production.</p>
+      </div>
+    </div>
+
+    <div class="card chromium">
+      <div class="card-content">
+        <h3>Chromium</h3>
+        <p>Stainless steel and specialty alloy applications.</p>
+      </div>
+    </div>
+
+    <div class="card rare">
+      <div class="card-content">
+        <h3>Rare Metals</h3>
+        <p>Strategic metals supporting advanced manufacturing.</p>
+      </div>
+    </div>
+
+    <div class="card energy">
+      <div class="card-content">
+        <h3>Energy & Resources</h3>
+        <p>Energy solutions supporting mining and processing operations.</p>
+      </div>
+    </div>
+
+    <div class="card logistics">
+      <div class="card-content">
+        <h3>Logistics & Trading</h3>
+        <p>Integrated logistics and global metals trading.</p>
+      </div>
+    </div>
+
+    <div class="card infrastructure">
+      <div class="card-content">
+        <h3>Infrastructure Supply</h3>
+        <p>Materials supporting large-scale infrastructure projects.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Protea Iron and Steel Group
+</footer>
 
 </body>
 </html>
+
 

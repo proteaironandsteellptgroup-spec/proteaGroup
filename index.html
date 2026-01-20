@@ -156,6 +156,42 @@
     grid-template-columns: 1fr;
   }
 }
+.card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  min-height: 260px;
+  padding: 32px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.card * {
+  position: relative;
+  z-index: 2;
+}
+
+.card.steel {
+  background-image: url("images/steel.jpg");
+}
+
+.card.aluminum {
+  background-image: url("images/aluminum.jpg");
+}
+
+.card.infrastructure {
+  background-image: url("images/infrastructure.jpg");
+}
+
 
   </style>
 </head>

@@ -1,140 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Protea Iron and Steel Group</title>
-
+<link rel="stylesheet" href="style.css">
 <style>
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #111;
-  line-height: 1.7;
-}
-
-/* Header */
+body { margin:0; font-family:system-ui; }
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 64px;
-  background: rgba(0,0,0,0.75);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 32px;
-  z-index: 100;
+  position:fixed; top:0; width:100%; height:64px;
+  background:rgba(0,0,0,.75); color:#fff;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:0 32px; z-index:100;
 }
-header nav {
-  display: flex;
-  align-items: center;
-}
-header a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 14px;
-  font-weight: 500;
-  white-space: nowrap;
-}
+header a { color:#fff; text-decoration:none; margin-left:24px; }
 
-/* Hero */
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
+.hero { position:relative; height:100vh; overflow:hidden; }
+.hero video {
+  position:absolute; top:50%; left:50%;
+  min-width:100%; min-height:100%;
+  transform:translate(-50%,-50%);
+  object-fit:cover;
 }
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: 1;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,.45);
-  z-index: 2;
-}
+.hero-overlay { position:absolute; inset:0; background:rgba(0,0,0,.45); }
 .hero-content {
-  position: relative;
-  z-index: 3;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding-left: 10%;
+  position:relative; z-index:2; height:100%;
+  display:flex; align-items:center; padding-left:10%;
+  color:#fff;
 }
-.hero-content h1 {
-  color: #fff;
-  font-size: clamp(2.8rem, 5vw, 4.8rem);
-  max-width: 820px;
-  line-height: 1.1;
-}
-
-/* Sections */
-section {
-  padding: 120px 0;
-}
-.light {
-  background: #f6f6f6;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 8vw;
-}
-h2 {
-  font-size: 2.6rem;
-  margin-bottom: 32px;
-}
-p {
-  max-width: 900px;
-  font-size: 1.05rem;
-}
-
-/* Cards */
+section { padding:120px 8vw; }
 .cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  margin-top: 48px;
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:32px; margin-top:48px;
 }
 .card {
-  background: #111;
-  color: #fff;
-  padding: 32px;
-  border-radius: 12px;
-  min-height: 200px;
+  background:#fff; padding:40px; border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
-.card h3 {
-  margin-top: 0;
-}
-
-/* Footer */
-footer {
-  background: #111;
-  color: #aaa;
-  text-align: center;
-  padding: 40px;
-  font-size: 14px;
-}
-
-/* Responsive */
-@media (max-width: 1000px) {
-  .cards { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 600px) {
-  .cards { grid-template-columns: 1fr; }
-  header { padding: 0 16px; }
-}
+footer { background:#111; color:#aaa; text-align:center; padding:40px; }
 </style>
 </head>
 
@@ -143,17 +46,16 @@ footer {
 <header>
 <strong>Protea Iron and Steel Group</strong>
 <nav>
-  <a href="#about">About Us</a>
-  <a href="#operations">Operations</a>
-  <a href="#careers">Careers</a>
-  <a href="#contact">Contact Us</a>
+  <a href="about.html">About Us</a>
+  <a href="operations.html">Operations</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact Us</a>
 </nav>
 </header>
 
-<!-- Hero -->
 <div class="hero">
-  <video class="hero-video" autoplay muted loop playsinline poster="hero.jpg">
-    <source src="hero.mp4" type="video/mp4" />
+  <video autoplay muted loop playsinline poster="hero.jpg">
+    <source src="hero.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -161,104 +63,33 @@ footer {
   </div>
 </div>
 
-<!-- About -->
-<section id="about" class="light">
-<div class="container">
-<h2>About Us</h2>
-
+<section>
+<h2>Who We Are</h2>
 <p>
-Founded in 1970 as a five-person mining operations team, Protea Iron and Steel Group
-has grown into a fully integrated global metals and mining enterprise.
+Protea Iron and Steel Group is a global metals and mining enterprise focused on
+responsible resource development, industrial excellence, and long-term value creation.
 </p>
-
-<p>
-Today, the Group supplies high-quality military-grade, medical-grade, and aerospace-grade
-materials to customers across 121 countries and regions worldwide. Our portfolio spans
-more than 30 metal categories, including aluminum, steel, zinc, nickel, and copper,
-covering the full value chain from exploration and extraction to refining, processing,
-logistics, and global distribution.
-</p>
-
-<p>
-Protea maintains offices in New York, California, and Washington (United States);
-London (United Kingdom); Munich and Berlin (Germany); as well as Cape Town,
-Johannesburg, and Durban (South Africa).
-</p>
-
-<p>
-Our mining assets are strategically located across South Africa, Botswana, Namibia,
-Zambia, Chile, and Australia, ensuring secure, diversified, and long-term supply.
-</p>
-
-<p>
-With approximately 14,000 employees worldwide, Protea operates industry-leading
-annual production capacity, including 170,000 tonnes of specialty aluminum,
-1.42 million tonnes of steel products, and 140,000 tonnes of copper. Our scale,
-quality standards, and operational discipline place the Group among global leaders
-in the metals industry.
-</p>
-</div>
-</section>
-
-<!-- Operations -->
-<section id="operations">
-<div class="container">
-<h2>Our Operations</h2>
 
 <div class="cards">
-  <div class="card"><h3>Primary Aluminum Ingots</h3></div>
-  <div class="card"><h3>Specialty Aluminum Alloys</h3></div>
-  <div class="card"><h3>Structural Steel Products</h3></div>
-  <div class="card"><h3>High-Strength Steel Plates</h3></div>
-  <div class="card"><h3>Military-Grade Steel</h3></div>
-  <div class="card"><h3>Medical-Grade Metals</h3></div>
-  <div class="card"><h3>Aerospace Alloys</h3></div>
-  <div class="card"><h3>Refined Copper Cathodes</h3></div>
-  <div class="card"><h3>Zinc Concentrates</h3></div>
-  <div class="card"><h3>Nickel-Based Alloys</h3></div>
-  <div class="card"><h3>Industrial Metal Powders</h3></div>
-  <div class="card"><h3>Custom Metal Solutions</h3></div>
-</div>
-</div>
-</section>
-
-<!-- Careers -->
-<section id="careers" class="light">
-<div class="container">
-<h2>Careers</h2>
-<p>
-Protea Iron and Steel Group offers career opportunities across mining operations,
-engineering, metallurgy, logistics, commercial management, and corporate functions.
-We value integrity, accountability, technical excellence, and long-term commitment.
-</p>
+  <div class="card">
+    <h3>Aluminum Processing</h3>
+    <p>Military-grade and aerospace-grade aluminum products.</p>
+  </div>
+  <div class="card">
+    <h3>Energy & Resources</h3>
+    <p>Supplying critical materials for energy-intensive industries.</p>
+  </div>
+  <div class="card">
+    <h3>Infrastructure Supply</h3>
+    <p>Supporting large-scale infrastructure worldwide.</p>
+  </div>
 </div>
 </section>
 
-<!-- Contact -->
-<section id="contact">
-<div class="container">
-<h2>Contact Us</h2>
-<p>
-General inquiries: info@proteagroup.com<br>
-Business partnerships: partnerships@proteagroup.com<br>
-Careers: careers@proteagroup.com
-</p>
-</div>
-</section>
-
-<footer>
-© 2026 Protea Iron and Steel Group
-</footer>
-
-<script>
-const overlay = document.querySelector('.hero-overlay');
-window.addEventListener('scroll', () => {
-  const opacity = Math.min(0.6, window.scrollY / 600);
-  overlay.style.background = `rgba(0,0,0,${0.25 + opacity})`;
-});
-</script>
+<footer>© 2026 Protea Iron and Steel Group</footer>
 
 </body>
 </html>
+
 
 

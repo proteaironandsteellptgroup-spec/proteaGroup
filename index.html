@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Protea Group</title>
+  <title>Protea Metal & Resources Group</title>
+
   <style>
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       color: #111;
     }
+
     header {
       position: fixed;
       top: 0;
@@ -23,203 +25,161 @@
       padding: 0 32px;
       z-index: 10;
     }
+
     header a {
       color: #fff;
       text-decoration: none;
       margin-left: 24px;
       font-size: 14px;
     }
+
+    /* ===== HERO VIDEO ===== */
     .hero {
+      position: relative;
       height: 100vh;
-      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url("https://images.unsplash.com/photo-1581091215367-59ab6f8a76b8?auto=format&fit=crop&w=1600&q=80")
-        center/cover no-repeat;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      height: 100%;
       display: flex;
       align-items: center;
+      padding-left: 8vw;
+    }
+
+    .hero-content h1 {
       color: #fff;
-      padding: 0 10%;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 1.1;
+      max-width: 800px;
     }
-    .hero h1 {
-      font-size: clamp(36px, 5vw, 64px);
-      max-width: 700px;
+
+    /* ===== SECTIONS ===== */
+    .section {
+      padding: 120px 0;
     }
-    section {
-      padding: 120px 10%;
+
+    .section.light {
+      background: #f6f6f6;
     }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8vw;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 80px;
+    }
+
+    /* ===== CARDS ===== */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 64px;
+    }
+
+    .card {
+      position: relative;
+      min-height: 260px;
+      padding: 32px;
+      border-radius: 12px;
+      color: #fff;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 1;
+    }
+
+    .card * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .card.aluminum {
+      background-image: url("images/aluminum.jpg");
+    }
+
+    .card.energy {
+      background-image: url("images/energy.jpg");
+    }
+
+    .card.infrastructure {
+      background-image: url("images/infrastructure.jpg");
+    }
+
     footer {
       background: #111;
       color: #aaa;
       text-align: center;
       padding: 40px;
     }
-    .hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
 
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: 1;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 2;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 3;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding-left: 8vw;
-}
-
-.hero-content h1 {
-  color: #fff;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 1.1;
-  max-width: 800px;
-}
-.section {
-  padding: 120px 0;
-}
-
-.section.light {
-  background: #f6f6f6;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 8vw;
-}
-
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 80px;
-}
-
-.two-col h2 {
-  font-size: 2.2rem;
-  margin: 0;
-}
-
-.two-col p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  max-width: 640px;
-}
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-top: 64px;
-}
-
-.card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 40px 32px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 50px rgba(0,0,0,0.12);
-}
-
-.card h3 {
-  margin-top: 0;
-  font-size: 1.4rem;
-}
-
-.card p {
-  line-height: 1.7;
-  color: #444;
-}
-
-@media (max-width: 900px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-.card {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  min-height: 260px;
-  padding: 32px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
-}
-
-.card * {
-  position: relative;
-  z-index: 2;
-}
-
-.card.steel {
-  background-image: url("images/steel.jpg");
-}
-
-.card.aluminum {
-  background-image: url("images/aluminum.jpg");
-}
-
-.card.infrastructure {
-  background-image: url("images/infrastructure.jpg");
-}
-
-
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
 
 <header>
-  <strong>Protea Group</strong>
+  <strong>Protea Metal & Resources Group</strong>
   <nav>
-    <a href="#">About us</a>
+    <a href="#">About</a>
     <a href="#">Operations</a>
     <a href="#">Careers</a>
-    <a href="#">Contact us</a>
+    <a href="#">Contact</a>
   </nav>
 </header>
 
-<div class="hero
- <video
-  class="hero-video"
-  autoplay
-  muted
-  loop
-  playsinline
-  poster="hero.jpg"
->
-  <source src="hero.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
+<div class="hero">
+  <video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    poster="hero.jpg"
+  >
+    <source src="hero.mp4" type="video/mp4">
+  </video>
 
   <div class="hero-overlay"></div>
 
@@ -228,56 +188,50 @@
   </div>
 </div>
 
-
 <section class="section light">
   <div class="container two-col">
     <h2>Who We Are</h2>
     <p>
-     Protea Iron & Steel Group is focused on responsible Metal processing and
-        long-term value creation across global markets. Our operations are built
-        on safety, sustainability, and disciplined capital allocation.
+      Protea Group focuses on responsible metals, resources and supply
+      chains, delivering long-term value through disciplined operations
+      and global partnerships.
     </p>
   </div>
 </section>
-  
+
 <section class="section">
   <div class="container">
     <h2>Our Operations</h2>
 
     <div class="cards">
       <div class="card aluminum">
-  <h3>Aluminum Processing</h3>
-      
-</div>
+        <h3>Aluminum Processing</h3>
+      </div>
 
-<div class="card energy">
-  <h3>Energy & Resources</h3>
-  ...
-</div>
+      <div class="card energy">
+        <h3>Energy & Resources</h3>
+      </div>
 
-<div class="card infrastructure">
-  <h3>Infrastructure Supply</h3>
-  ...
-</div>
-    
+      <div class="card infrastructure">
+        <h3>Infrastructure Supply</h3>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  © 2026 Protea iron & steel Group
+  © 2026 Protea Metal & Resources Group
 </footer>
+
 <script>
-  const hero = document.querySelector('.hero');
   const overlay = document.querySelector('.hero-overlay');
 
   window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const opacity = Math.min(0.6, scrollY / 600);
-    overlay.style.background = `rgba(0, 0, 0, ${0.25 + opacity})`;
+    const opacity = Math.min(0.6, window.scrollY / 600);
+    overlay.style.background = `rgba(0,0,0,${0.25 + opacity})`;
   });
 </script>
 
 </body>
 </html>
+

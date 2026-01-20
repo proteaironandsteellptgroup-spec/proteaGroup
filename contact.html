@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Global Offices – Protea Iron and Steel Group</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Protea Iron and Steel Group</title>
 
 <style>
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #f3f4f6;
-  color: #111827;
+  color: #111;
+  background: #f4f6f8;
 }
 
 header {
@@ -18,13 +18,13 @@ header {
   top: 0;
   width: 100%;
   height: 64px;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.85);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 32px;
-  z-index: 100;
+  z-index: 10;
 }
 
 header a {
@@ -34,58 +34,124 @@ header a {
   font-size: 14px;
 }
 
-.page {
-  padding-top: 96px;
-  padding-bottom: 80px;
+main {
+  padding: 120px 8vw 80px;
 }
 
-.office-block {
-  max-width: 1200px;
-  margin: 0 auto 72px;
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 40px;
+}
+
+.locations {
   display: grid;
-  grid-template-columns: 420px 1fr;
-  background: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
 }
 
-.office-info {
-  padding: 48px;
+.location-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
 
-.office-info h3 {
+.location-card h3 {
   margin-top: 0;
-  font-size: 1.8rem;
 }
 
-.office-info p {
-  margin: 10px 0;
-  color: #4b5563;
-  font-size: 0.95rem;
+.location-card p {
+  margin: 6px 0;
+  font-size: 14px;
 }
 
-.office-info strong {
-  color: #111;
+.contact-trigger {
+  color: #0f172a;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.map iframe {
+/* ===== Modal ===== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
   width: 100%;
-  height: 100%;
-  border: 0;
+  max-width: 520px;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.35);
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.modal-content label {
+  font-size: 13px;
+  margin-top: 16px;
+  display: block;
+  color: #374151;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.modal-content textarea {
+  resize: vertical;
+}
+
+.modal-content button {
+  margin-top: 26px;
+  background: #facc15;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-close {
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.checkbox {
+  margin-top: 16px;
+  font-size: 13px;
 }
 
 footer {
   text-align: center;
+  padding: 40px;
+  font-size: 13px;
   color: #6b7280;
-  padding: 48px 0;
-  font-size: 14px;
-}
-
-@media (max-width: 900px) {
-  .office-block {
-    grid-template-columns: 1fr;
-  }
 }
 </style>
 </head>
@@ -96,150 +162,163 @@ footer {
   <strong>Protea Iron and Steel Group</strong>
   <nav>
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="about.html">About us</a>
     <a href="operations.html">Operations</a>
     <a href="careers.html">Careers</a>
+    <a href="contact.html">Contact us</a>
   </nav>
 </header>
 
-<div class="page">
+<main>
+<h1>Global Offices</h1>
 
-  <!-- United States · New York -->
-  <div class="office-block">
-    <div class="office-info">
-      <h3>New York, United States</h3>
-      <p>350 Fifth Avenue<br>New York, NY 10118</p>
-      <p><strong>Phone:</strong> +1 929 494 9248</p>
-      <p><strong>Email:</strong><br>
-        proteaironandsteellptgroup@gmail.com<br>
-        proteaironandsteellptgroup@outlook.com
-      </p>
-    </div>
-    <div class="map">
-      <iframe src="https://www.google.com/maps?q=New%20York%20USA&output=embed"></iframe>
-    </div>
-  </div>
+<div class="locations">
 
-  <!-- United States · California -->
-  <div class="office-block">
-    <div class="office-info">
-      <h3>California, United States</h3>
-      <p>101 California Street<br>San Francisco, CA 94111</p>
-      <p><strong>Phone:</strong> +1 415 682 7740</p>
-      <p><strong>Email:</strong><br>
-        proteaironandsteellptgroup@gmail.com<br>
-        proteaironandsteellptgroup@outlook.com
-      </p>
-    </div>
-    <div class="map">
-      <iframe src="https://www.google.com/maps?q=San%20Francisco%20California&output=embed"></iframe>
-    </div>
-  </div>
-
-  <!-- United States · Washington -->
-  <div class="office-block">
-    <div class="office-info">
-      <h3>Washington D.C., United States</h3>
-      <p>1800 Pennsylvania Avenue NW<br>Washington, DC 20006</p>
-      <p><strong>Phone:</strong> +1 202 918 5632</p>
-      <p><strong>Email:</strong><br>
-        proteaironandsteellptgroup@gmail.com<br>
-        proteaironandsteellptgroup@outlook.com
-      </p>
-    </div>
-    <div class="map">
-      <iframe src="https://www.google.com/maps?q=Washington%20DC&output=embed"></iframe>
-    </div>
-  </div>
-
-  <!-- Germany · Berlin -->
-  <div class="office-block">
-    <div class="office-info">
-      <h3>Berlin, Germany</h3>
-      <p>Potsdamer Platz 1<br>10785 Berlin</p>
-      <p><strong>Phone:</strong> +49 30 5679 2210</p>
-      <p><strong>Email:</strong><br>
-        proteaironandsteellptgroup@gmail.com<br>
-        proteaironandsteellptgroup@outlook.com
-      </p>
-    </div>
-    <div class="map">
-      <iframe src="https://www.google.com/maps?q=Berlin%20Germany&output=embed"></iframe>
-    </div>
-  </div>
-
-  <!-- Germany · Munich -->
-  <div class="office-block">
-    <div class="office-info">
-      <h3>Munich, Germany</h3>
-      <p>Maximilianstraße 35<br>80539 Munich</p>
-      <p><strong>Phone:</strong> +49 89 7456 8300</p>
-      <p><strong>Email:</strong><br>
-        proteaironandsteellptgroup@gmail.com<br>
-        proteaironandsteellptgroup@outlook.com
-      </p>
-    </div>
-    <div class="map">
-      <iframe src="https://www.google.com/maps?q=Munich%20Germany&output=embed"></iframe>
-    </div>
-  </div>
-
-  <!-- South Africa · Cape Town -->
-  <div class="office-block">
-    <div class="office-info">
-      <h3>Cape Town, South Africa</h3>
-      <p>1 Dock Road<br>Victoria & Alfred Waterfront</p>
-      <p><strong>Phone:</strong> +27 21 418 7720</p>
-      <p><strong>Email:</strong><br>
-        proteaironandsteellptgroup@gmail.com<br>
-        proteaironandsteellptgroup@outlook.com
-      </p>
-    </div>
-    <div class="map">
-      <iframe src="https://www.google.com/maps?q=Cape%20Town%20South%20Africa&output=embed"></iframe>
-    </div>
-  </div>
-
-  <!-- South Africa · Johannesburg -->
-  <div class="office-block">
-    <div class="office-info">
-      <h3>Johannesburg, South Africa</h3>
-      <p>Sandton City Office Tower<br>Johannesburg 2196</p>
-      <p><strong>Phone:</strong> +27 11 245 8800</p>
-      <p><strong>Email:</strong><br>
-        proteaironandsteellptgroup@gmail.com<br>
-        proteaironandsteellptgroup@outlook.com
-      </p>
-    </div>
-    <div class="map">
-      <iframe src="https://www.google.com/maps?q=Johannesburg%20South%20Africa&output=embed"></iframe>
-    </div>
-  </div>
-
-  <!-- South Africa · Durban -->
-  <div class="office-block">
-    <div class="office-info">
-      <h3>Durban, South Africa</h3>
-      <p>Umhlanga Ridge Boulevard<br>Durban 4320</p>
-      <p><strong>Phone:</strong> +27 31 582 4410</p>
-      <p><strong>Email:</strong><br>
-        proteaironandsteellptgroup@gmail.com<br>
-        proteaironandsteellptgroup@outlook.com
-      </p>
-    </div>
-    <div class="map">
-      <iframe src="https://www.google.com/maps?q=Durban%20South%20Africa&output=embed"></iframe>
-    </div>
-  </div>
-
+<!-- SOUTH AFRICA FIRST -->
+<div class="location-card">
+<h3>Cape Town, South Africa</h3>
+<p>V&A Waterfront, Cape Town</p>
+<p>Phone: <span class="contact-trigger">+27 21 418 2200</span></p>
+<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@gmail.com</span></p>
 </div>
 
+<div class="location-card">
+<h3>Johannesburg, South Africa</h3>
+<p>Sandton Business District</p>
+<p>Phone: <span class="contact-trigger">+27 11 245 9800</span></p>
+<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@outlook.com</span></p>
+</div>
+
+<div class="location-card">
+<h3>Pretoria, South Africa</h3>
+<p>Hatfield, Pretoria</p>
+<p>Phone: <span class="contact-trigger">+27 12 392 5100</span></p>
+<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@gmail.com</span></p>
+</div>
+
+<div class="location-card">
+<h3>Durban, South Africa</h3>
+<p>Durban Harbour</p>
+<p>Phone: <span class="contact-trigger">+27 31 566 7400</span></p>
+<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@outlook.com</span></p>
+</div>
+
+<!-- USA -->
+<div class="location-card">
+<h3>New York, USA</h3>
+<p>Manhattan, New York</p>
+<p>Phone: <span class="contact-trigger">+1 929 494 9248</span></p>
+<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@gmail.com</span></p>
+</div>
+
+<div class="location-card">
+<h3>California, USA</h3>
+<p>Los Angeles, CA</p>
+<p>Phone: <span class="contact-trigger">+1 213 640 7712</span></p>
+<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@outlook.com</span></p>
+</div>
+
+<div class="location-card">
+<h3>Washington, USA</h3>
+<p>Washington DC</p>
+<p>Phone: <span class="contact-trigger">+1 202 555 4180</span></p>
+<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@gmail.com</span></p>
+</div>
+
+<!-- GERMANY -->
+<div class="location-card">
+<h3>Berlin, Germany</h3>
+<p>Mitte, Berlin</p>
+<p>Phone: <span class="contact-trigger">+49 30 2300 1122</span></p>
+<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@outlook.com</span></p>
+</div>
+
+<div class="location-card">
+<h3>Munich, Germany</h3>
+<p>Maxvorstadt, Munich</p>
+<p>Phone: <span class="contact-trigger">+49 89 4587 6621</span></p>
+<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@gmail.com</span></p>
+</div>
+
+<!-- UK -->
+<div class="location-card">
+<h3>London, United Kingdom</h3>
+<p>Westminster, London</p>
+<p>Phone: <span class="contact-trigger">+44 20 7798 1700</span></p>
+<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@outlook.com</span></p>
+</div>
+
+</div>
+</main>
+
 <footer>
-  © 2026 Protea Iron and Steel Group
+© 2026 Protea Iron and Steel Group
 </footer>
+
+<!-- MODAL -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <h2>Contact Protea Iron and Steel Group</h2>
+
+    <form>
+      <label>Enquiry type</label>
+      <select required>
+        <option value="">What is the nature of your enquiry?</option>
+        <option>Sales & Supply</option>
+        <option>Mining Operations</option>
+        <option>Logistics</option>
+        <option>Careers</option>
+        <option>General</option>
+      </select>
+
+      <label>Name</label>
+      <input type="text" placeholder="Your first and last name" required>
+
+      <label>Email</label>
+      <input type="email" placeholder="Your email" required>
+
+      <label>Phone</label>
+      <input type="tel" placeholder="Your phone number">
+
+      <label>Message</label>
+      <textarea rows="4" placeholder="Your message"></textarea>
+
+      <label class="checkbox">
+        <input type="checkbox" required> I accept the terms and conditions
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script>
+const modal = document.getElementById('contactModal');
+const triggers = document.querySelectorAll('.contact-trigger');
+const closeBtn = document.querySelector('.modal-close');
+
+triggers.forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault();
+    modal.classList.add('active');
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('active');
+});
+
+modal.addEventListener('click', e => {
+  if (e.target === modal) {
+    modal.classList.remove('active');
+  }
+});
+</script>
 
 </body>
 </html>
+
 
 
 

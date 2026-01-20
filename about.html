@@ -1,40 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>About Us – Protea Iron and Steel Group</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0f1115;
+  color: #e6e6e6;
+  line-height: 1.8;
+}
+
+/* Header (统一首页风格) */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  z-index: 100;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Page Hero */
+.page-hero {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  background: linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)
+  );
+}
+
+.page-hero h1 {
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  max-width: 800px;
+  line-height: 1.1;
+}
+
+/* Content Wrapper */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 120px 8vw;
+}
+
+/* Floating Card */
+.about-card {
+  background: #151922;
+  max-width: 980px;
+  padding: 64px 72px;
+  border-radius: 18px;
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* Typography */
+.about-card h2 {
+  font-size: 2.2rem;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.about-card p {
+  font-size: 1.05rem;
+  margin-bottom: 28px;
+  color: #d4d6dc;
+}
+
+/* Subtle Divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.15),
+    transparent
+  );
+  margin: 48px 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #888;
+  padding: 48px 0;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-card {
+    padding: 48px 32px;
+  }
+
+  .page-hero {
+    padding-left: 8vw;
+  }
+}
+</style>
 </head>
+
 <body>
 
-<h1>About Protea Iron and Steel Group</h1>
+<header>
+  <strong>Protea Iron and Steel Group</strong>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="operations.html">Operations</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-<p>
-Founded in 1970 as a five-person mining team, Protea has grown into a fully integrated
-global metals and mining company serving 121 countries and regions.
-</p>
+<!-- Page Hero -->
+<section class="page-hero">
+  <h1>Building a Global Metals Enterprise Since 1970</h1>
+</section>
 
-<p>
-The Group supplies military-grade, medical-grade, and aerospace-grade aluminum, steel,
-zinc, nickel, copper, and over 30 strategic metals.
-</p>
+<!-- Main Content -->
+<div class="wrapper">
+  <div class="about-card">
 
-<p>
-Protea maintains offices in New York, California, Washington, London, Munich, Berlin,
-Cape Town, Johannesburg, and Durban.
-</p>
+    <h2>Who We Are</h2>
 
-<p>
-Mining operations span South Africa, Namibia, Botswana, Zambia, Chile, and Australia.
-</p>
+    <p>
+      Founded in 1970 as a five-person mining operations team, Protea Iron and Steel Group
+      has grown into a fully integrated global metals and mining enterprise with operations
+      spanning exploration, extraction, refining, processing, logistics, and international
+      distribution.
+    </p>
 
-<p>
-With over 14,000 employees, annual output includes 170,000 tonnes of aluminum,
-1.42 million tonnes of steel, and 140,000 tonnes of copper.
-</p>
+    <p>
+      Today, the Group supplies high-quality military-grade, medical-grade, and
+      aerospace-grade materials to customers across 121 countries and regions worldwide.
+      Our diversified portfolio covers more than 30 strategic metal categories, including
+      aluminum, steel, zinc, nickel, and copper.
+    </p>
 
-<a href="index.html">← Back to Home</a>
+    <div class="divider"></div>
+
+    <h2>Global Presence</h2>
+
+    <p>
+      Protea maintains regional offices and commercial operations in key global hubs,
+      including New York, California, and Washington (United States); London (United Kingdom);
+      Munich and Berlin (Germany); as well as Cape Town, Johannesburg, and Durban (South Africa).
+    </p>
+
+    <p>
+      Our mining and processing assets are strategically located across South Africa,
+      Botswana, Namibia, Zambia, Chile, and Australia, ensuring resilient supply chains
+      and long-term access to critical resources.
+    </p>
+
+    <div class="divider"></div>
+
+    <h2>Scale & Capability</h2>
+
+    <p>
+      With a global workforce of approximately 14,000 professionals, Protea operates
+      industry-leading annual production capacity, including 170,000 tonnes of
+      specialty aluminum, 1.42 million tonnes of steel products, and 140,000 tonnes of copper.
+    </p>
+
+    <p>
+      Through disciplined capital allocation, operational excellence, and a strong
+      commitment to safety and sustainability, Protea continues to strengthen its
+      position among the world’s leading metals and mining groups.
+    </p>
+
+  </div>
+</div>
+
+<footer>
+  © 2026 Protea Iron and Steel Group
+</footer>
 
 </body>
 </html>
+
 

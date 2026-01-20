@@ -121,6 +121,41 @@
   line-height: 1.8;
   max-width: 640px;
 }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 64px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 40px 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.card p {
+  line-height: 1.7;
+  color: #444;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
 
   </style>
 </head>
@@ -170,12 +205,34 @@
 </section>
   
 <section class="section">
-  <div class="container two-col">
+  <div class="container">
     <h2>Our Operations</h2>
-    <p>
-      We operate across multiple regions, supplying steel products that
-      support infrastructure, energy and manufacturing.
-    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Steel Processing</h3>
+        <p>
+          Advanced processing and distribution of high-grade steel products
+          serving construction, manufacturing and industrial sectors.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Energy & Resources</h3>
+        <p>
+          Supporting energy-intensive industries through efficient sourcing,
+          logistics and long-term supply partnerships.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Infrastructure Supply</h3>
+        <p>
+          Delivering materials and solutions for large-scale infrastructure
+          projects across emerging and developed markets.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 

@@ -147,6 +147,16 @@
 <footer>
   © 2026 Protea Iron & Steel Group
 </footer>
+<script>
+  const hero = document.querySelector('.hero');
+  const overlay = document.querySelector('.hero-overlay');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const opacity = Math.min(0.6, scrollY / 600);
+    overlay.style.background = `rgba(0, 0, 0, ${0.25 + opacity})`;
+  });
+</script>
 
 </body>
 </html>

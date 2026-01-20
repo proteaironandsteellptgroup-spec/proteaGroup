@@ -1,13 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>Contact Us</title></head>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Global Offices – Protea Iron and Steel Group</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  z-index: 100;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 14px;
+}
+
+.page {
+  padding-top: 96px;
+  padding-bottom: 80px;
+}
+
+.office-block {
+  max-width: 1200px;
+  margin: 0 auto 72px;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.office-info {
+  padding: 48px;
+}
+
+.office-info h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.office-info p {
+  margin: 10px 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.office-info strong {
+  color: #111;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+footer {
+  text-align: center;
+  color: #6b7280;
+  padding: 48px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .office-block {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
 <body>
 
-<h1>Contact Us</h1>
-<p>Email: info@proteagroup.com</p>
-<p>Careers: careers@proteagroup.com</p>
+<header>
+  <strong>Protea Iron and Steel Group</strong>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="operations.html">Operations</a>
+    <a href="careers.html">Careers</a>
+  </nav>
+</header>
 
-<a href="index.html">← Back to Home</a>
+<div class="page">
+
+  <!-- Singapore -->
+  <div class="office-block">
+    <div class="office-info">
+      <h3>Singapore</h3>
+      <p>16 Collyer Quay<br>Unit #18-00 Income at Raffles</p>
+      <p>Singapore 049318</p>
+      <p><strong>Phone:</strong> +65 6679 2600</p>
+      <p><strong>Fax:</strong> +65 6679 2500</p>
+    </div>
+    <div class="map">
+      <iframe 
+        src="https://www.google.com/maps?q=Singapore&output=embed">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- London -->
+  <div class="office-block">
+    <div class="office-info">
+      <h3>London</h3>
+      <p>Nova North<br>11 Bressenden Place</p>
+      <p>London SW1E 5BY</p>
+      <p><strong>Phone:</strong> +44 20 7798 1700</p>
+      <p><strong>Fax:</strong> +44 20 7798 1701</p>
+    </div>
+    <div class="map">
+      <iframe 
+        src="https://www.google.com/maps?q=London%20UK&output=embed">
+      </iframe>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Protea Iron and Steel Group
+</footer>
+
 </body>
 </html>
+
 

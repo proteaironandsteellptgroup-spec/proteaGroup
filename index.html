@@ -91,6 +91,36 @@
   line-height: 1.1;
   max-width: 800px;
 }
+.section {
+  padding: 120px 0;
+}
+
+.section.light {
+  background: #f6f6f6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8vw;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+}
+
+.two-col h2 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.two-col p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 640px;
+}
 
   </style>
 </head>
@@ -128,20 +158,25 @@
 </div>
 
 
-<section>
-  <h2>Who We Are</h2>
-  <p>
-    Protea Iron & Steel Group is focused on responsible steel processing and
-    long-term value creation across global markets.
-  </p>
+<section class="section light">
+  <div class="container two-col">
+    <h2>Who We Are</h2>
+    <p>
+     Protea Iron & Steel Group is focused on responsible steel processing and
+        long-term value creation across global markets. Our operations are built
+        on safety, sustainability, and disciplined capital allocation.
+    </p>
+  </div>
 </section>
-
-<section style="background:#f5f5f5">
-  <h2>Our Operations</h2>
-  <p>
-    We operate across multiple regions, supplying steel products that support
-    infrastructure, energy and manufacturing.
-  </p>
+  
+<section class="section">
+  <div class="container two-col">
+    <h2>Our Operations</h2>
+    <p>
+      We operate across multiple regions, supplying steel products that
+      support infrastructure, energy and manufacturing.
+    </p>
+  </div>
 </section>
 
 <footer>

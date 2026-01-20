@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Protea Iron and Steel Group</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us | Protea Iron and Steel Group</title>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <style>
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #111;
   background: #f4f6f8;
+  color: #111;
 }
-
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 64px;
   background: rgba(0,0,0,0.85);
   color: #fff;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 32px;
-  z-index: 10;
 }
-
 header a {
   color: #fff;
   text-decoration: none;
@@ -34,124 +31,84 @@ header a {
   font-size: 14px;
 }
 
-main {
-  padding: 120px 8vw 80px;
+.container {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 24px;
 }
 
 h1 {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
+  margin-bottom: 32px;
+}
+
+.office {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
   margin-bottom: 40px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
-.locations {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-}
-
-.location-card {
-  background: #fff;
-  padding: 28px;
-  border-radius: 14px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-}
-
-.location-card h3 {
+.office h2 {
   margin-top: 0;
 }
 
-.location-card p {
-  margin: 6px 0;
-  font-size: 14px;
+.map {
+  margin-top: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 280px;
 }
 
-.contact-trigger {
-  color: #0f172a;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-/* ===== Modal ===== */
-
-.modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
-.modal.active {
-  display: flex;
-}
-
-.modal-content {
-  background: #fff;
+iframe {
   width: 100%;
-  max-width: 520px;
-  padding: 40px;
-  border-radius: 18px;
-  box-shadow: 0 40px 100px rgba(0,0,0,0.35);
-  position: relative;
-}
-
-.modal-content h2 {
-  margin-top: 0;
-  margin-bottom: 24px;
-}
-
-.modal-content label {
-  font-size: 13px;
-  margin-top: 16px;
-  display: block;
-  color: #374151;
-}
-
-.modal-content input,
-.modal-content select,
-.modal-content textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  font-size: 14px;
-}
-
-.modal-content textarea {
-  resize: vertical;
-}
-
-.modal-content button {
-  margin-top: 26px;
-  background: #facc15;
+  height: 100%;
   border: none;
+}
+
+.form-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+form label {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+input, select, textarea {
+  width: 100%;
   padding: 14px;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
+  font-size: 14px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-.modal-close {
-  position: absolute;
-  right: 20px;
-  top: 16px;
-  font-size: 26px;
-  cursor: pointer;
+textarea {
+  min-height: 120px;
 }
 
-.checkbox {
-  margin-top: 16px;
-  font-size: 13px;
+button {
+  margin-top: 24px;
+  background: #f5d300;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
 footer {
+  background: #111;
+  color: #aaa;
   text-align: center;
   padding: 40px;
-  font-size: 13px;
-  color: #6b7280;
+  margin-top: 80px;
 }
 </style>
 </head>
@@ -162,162 +119,110 @@ footer {
   <strong>Protea Iron and Steel Group</strong>
   <nav>
     <a href="index.html">Home</a>
-    <a href="about.html">About us</a>
+    <a href="about.html">About Us</a>
     <a href="operations.html">Operations</a>
     <a href="careers.html">Careers</a>
-    <a href="contact.html">Contact us</a>
   </nav>
 </header>
 
-<main>
-<h1>Global Offices</h1>
+<div class="container">
+<h1>Contact Us</h1>
 
-<div class="locations">
+<!-- SOUTH AFRICA -->
+<div class="office">
+<h2>South Africa – Cape Town (Head Office)</h2>
+<p>
+Phone: +27 21 555 8934<br>
+Email: proteaironandsteellptgroup@outlook.com<br>
+Email: proteaironandsteellptgroup@gmail.com
+</p>
 
-<!-- SOUTH AFRICA FIRST -->
-<div class="location-card">
-<h3>Cape Town, South Africa</h3>
-<p>V&A Waterfront, Cape Town</p>
-<p>Phone: <span class="contact-trigger">+27 21 418 2200</span></p>
-<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@gmail.com</span></p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=Cape%20Town&t=&z=5&output=embed"></iframe>
 </div>
-
-<div class="location-card">
-<h3>Johannesburg, South Africa</h3>
-<p>Sandton Business District</p>
-<p>Phone: <span class="contact-trigger">+27 11 245 9800</span></p>
-<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@outlook.com</span></p>
-</div>
-
-<div class="location-card">
-<h3>Pretoria, South Africa</h3>
-<p>Hatfield, Pretoria</p>
-<p>Phone: <span class="contact-trigger">+27 12 392 5100</span></p>
-<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@gmail.com</span></p>
-</div>
-
-<div class="location-card">
-<h3>Durban, South Africa</h3>
-<p>Durban Harbour</p>
-<p>Phone: <span class="contact-trigger">+27 31 566 7400</span></p>
-<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@outlook.com</span></p>
 </div>
 
 <!-- USA -->
-<div class="location-card">
-<h3>New York, USA</h3>
-<p>Manhattan, New York</p>
-<p>Phone: <span class="contact-trigger">+1 929 494 9248</span></p>
-<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@gmail.com</span></p>
-</div>
+<div class="office">
+<h2>United States – New York</h2>
+<p>
+Phone: +1 929 494 9248<br>
+Email: proteaironandsteellptgroup@outlook.com
+</p>
 
-<div class="location-card">
-<h3>California, USA</h3>
-<p>Los Angeles, CA</p>
-<p>Phone: <span class="contact-trigger">+1 213 640 7712</span></p>
-<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@outlook.com</span></p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=New%20York&t=&z=5&output=embed"></iframe>
 </div>
-
-<div class="location-card">
-<h3>Washington, USA</h3>
-<p>Washington DC</p>
-<p>Phone: <span class="contact-trigger">+1 202 555 4180</span></p>
-<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@gmail.com</span></p>
 </div>
 
 <!-- GERMANY -->
-<div class="location-card">
-<h3>Berlin, Germany</h3>
-<p>Mitte, Berlin</p>
-<p>Phone: <span class="contact-trigger">+49 30 2300 1122</span></p>
-<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@outlook.com</span></p>
+<div class="office">
+<h2>Germany – Berlin & Munich</h2>
+<p>
+Phone: +49 30 8899 6721<br>
+Email: proteaironandsteellptgroup@outlook.com
+</p>
+
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=Germany&t=&z=5&output=embed"></iframe>
+</div>
 </div>
 
-<div class="location-card">
-<h3>Munich, Germany</h3>
-<p>Maxvorstadt, Munich</p>
-<p>Phone: <span class="contact-trigger">+49 89 4587 6621</span></p>
-<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@gmail.com</span></p>
-</div>
+<!-- CONTACT FORM -->
+<div class="form-box">
+<h2>Send an Enquiry</h2>
 
-<!-- UK -->
-<div class="location-card">
-<h3>London, United Kingdom</h3>
-<p>Westminster, London</p>
-<p>Phone: <span class="contact-trigger">+44 20 7798 1700</span></p>
-<p>Email: <span class="contact-trigger">proteaironandsteellptgroup@outlook.com</span></p>
-</div>
+<form id="contactForm">
+<label>Enquiry Type</label>
+<select name="enquiry">
+<option>General Enquiry</option>
+<option>Sales</option>
+<option>Partnership</option>
+<option>Careers</option>
+</select>
 
+<label>Full Name</label>
+<input type="text" name="name" required>
+
+<label>Email Address</label>
+<input type="email" name="email" required>
+
+<label>Phone Number</label>
+<input type="text" name="phone">
+
+<label>Message</label>
+<textarea name="message"></textarea>
+
+<button type="submit">Submit</button>
+</form>
 </div>
-</main>
+</div>
 
 <footer>
 © 2026 Protea Iron and Steel Group
 </footer>
 
-<!-- MODAL -->
-<div id="contactModal" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <h2>Contact Protea Iron and Steel Group</h2>
-
-    <form>
-      <label>Enquiry type</label>
-      <select required>
-        <option value="">What is the nature of your enquiry?</option>
-        <option>Sales & Supply</option>
-        <option>Mining Operations</option>
-        <option>Logistics</option>
-        <option>Careers</option>
-        <option>General</option>
-      </select>
-
-      <label>Name</label>
-      <input type="text" placeholder="Your first and last name" required>
-
-      <label>Email</label>
-      <input type="email" placeholder="Your email" required>
-
-      <label>Phone</label>
-      <input type="tel" placeholder="Your phone number">
-
-      <label>Message</label>
-      <textarea rows="4" placeholder="Your message"></textarea>
-
-      <label class="checkbox">
-        <input type="checkbox" required> I accept the terms and conditions
-      </label>
-
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-</div>
-
 <script>
-const modal = document.getElementById('contactModal');
-const triggers = document.querySelectorAll('.contact-trigger');
-const closeBtn = document.querySelector('.modal-close');
+emailjs.init("_jKY2HopxPbZylsh");
 
-triggers.forEach(el => {
-  el.addEventListener('click', e => {
-    e.preventDefault();
-    modal.classList.add('active');
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  emailjs.sendForm(
+    "service_8lisu6o",
+    "template_i60ex9i",
+    this
+  ).then(() => {
+    alert("Thank you for contacting us. Our team will reach out to you shortly. Please check your email for further updates.");
+    this.reset();
+  }, () => {
+    alert("Submission failed. Please try again later.");
   });
-});
-
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('active');
-});
-
-modal.addEventListener('click', e => {
-  if (e.target === modal) {
-    modal.classList.remove('active');
-  }
 });
 </script>
 
 </body>
 </html>
+
 
 
 

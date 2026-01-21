@@ -13,7 +13,7 @@ body {
   color: #111;
 }
 
-/* Header */
+/* ================= Header ================= */
 header {
   position: fixed;
   top: 0;
@@ -26,6 +26,21 @@ header {
   justify-content: space-between;
   padding: 0 32px;
   z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.brand img {
+  height: 36px;
+  width: auto;
 }
 
 header a {
@@ -158,7 +173,10 @@ footer {
 <body>
 
 <header>
-  <strong>Protea Iron and Steel Group</strong>
+  <div class="brand">
+    <img src="images/logo-protea.png" alt="Protea Iron and Steel Group Logo">
+    <span>Protea Iron and Steel Group</span>
+  </div>
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -294,5 +312,6 @@ footer {
 
 </body>
 </html>
+
 
 

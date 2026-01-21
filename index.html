@@ -1,214 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Protea Iron and Steel Group</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protea Iron and Steel Group</title>
 
-<style>
-* {
-  box-sizing: border-box;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #111;
-  line-height: 1.7;
-}
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #111;
+      line-height: 1.7;
+    }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+    /* ================= Header ================= */
 
-/* ================= Header ================= */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 64px;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      align-items: center;
+      z-index: 100;
+    }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 64px;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(6px);
-  z-index: 1000;
-}
+    .header-inner {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-.header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
-.logo img {
-  height: 40px;
-}
+    .logo img {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
 
-nav {
-  display: flex;
-  gap: 28px;
-}
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 14px;
+      font-weight: 500;
+    }
 
-nav a {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  opacity: 0.9;
-}
+    nav a:hover {
+      opacity: 0.8;
+    }
 
-nav a:hover {
-  opacity: 1;
-}
+    /* ================= Hero ================= */
 
-/* ================= Hero Video ================= */
+    .hero {
+      margin-top: 64px;
+      width: 100%;
+      height: 520px;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
 
-.hero {
-  margin-top: 64px;
-  height: 520px;           /* 关键：不是全屏 */
-  position: relative;
-  overflow: hidden;
-}
+    .hero video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.hero video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-}
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
 
-.hero-content {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-}
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      color: #fff;
+    }
 
-.hero-inner {
-  max-width: 1200px;
-  padding: 0 24px;
-  margin: 0 auto;
-  color: #fff;
-}
+    .hero-inner h1 {
+      font-size: 42px;
+      max-width: 720px;
+      margin-bottom: 16px;
+    }
 
-.hero-inner h1 {
-  font-size: 42px;
-  max-width: 720px;
-  margin-bottom: 16px;
-}
+    .hero-inner p {
+      font-size: 18px;
+      max-width: 600px;
+      opacity: 0.9;
+    }
 
-.hero-inner p {
-  font-size: 18px;
-  max-width: 600px;
-  opacity: 0.9;
-}
+    /* ================= Sections ================= */
 
-/* ================= Sections ================= */
+    section {
+      padding: 100px 0;
+    }
 
-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 96px 24px;
-}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
+    /* ================= Who We Are ================= */
 
-section p {
-  max-width: 720px;
-  color: #444;
-}
+    .who h2 {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
 
-/* ================= Cards ================= */
+    .who p {
+      max-width: 720px;
+      font-size: 16px;
+      color: #333;
+    }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-top: 48px;
-}
+    /* ================= Cards ================= */
 
-.card {
-  position: relative;
-  height: 360px;
-  color: #fff;
-  overflow: hidden;
-}
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 64px;
+    }
 
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .card {
+      position: relative;
+      min-height: 260px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 32px;
+    }
 
-.card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-}
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 1;
+    }
 
-.card-content {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  right: 24px;
-  z-index: 2;
-}
+    .card h3 {
+      position: relative;
+      z-index: 2;
+      font-size: 22px;
+      margin: 0;
+    }
 
-.card-content h3 {
-  margin: 0 0 8px;
-  font-size: 22px;
-}
+    .card.aluminum {
+      background-image: url("images/aluminum.jpg");
+    }
 
-.card-content p {
-  font-size: 14px;
-  opacity: 0.9;
-}
+    .card.energy {
+      background-image: url("images/energy.jpg");
+    }
 
-/* ================= Footer ================= */
+    .card.infrastructure {
+      background-image: url("images/infrastructure.jpg");
+    }
 
-footer {
-  background: #111;
-  color: #aaa;
-  padding: 48px 24px;
-  text-align: center;
-  font-size: 14px;
-}
+    /* ================= Footer ================= */
 
-/* ================= Responsive ================= */
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 14px;
+    }
 
-@media (max-width: 900px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
+    /* ================= Responsive ================= */
 
-  .hero-inner h1 {
-    font-size: 32px;
-  }
-}
-</style>
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        height: 420px;
+      }
+
+      .hero-inner h1 {
+        font-size: 32px;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
 
 <header>
   <div class="header-inner">
-    <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="Protea Iron and Steel Group">
-    </a>
+    <div class="logo">
+      <img src="images/logo-protea.png" alt="Protea Iron and Steel Group">
+    </div>
     <nav>
       <a href="about.html">About</a>
       <a href="operations.html">Operations</a>
@@ -218,7 +235,6 @@ footer {
   </div>
 </header>
 
-<!-- Hero Video -->
 <section class="hero">
   <video autoplay muted loop playsinline>
     <source src="hero.mp4" type="video/mp4">
@@ -235,48 +251,38 @@ footer {
   </div>
 </section>
 
-<!-- Who We Are -->
-<section>
-  <h2>Who We Are</h2>
-  <p>
-    Protea Iron and Steel Group is a modern global metals and resources
-    company integrating mining, processing, logistics and international
-    distribution across key industrial markets.
-  </p>
+<section class="who">
+  <div class="container">
+    <h2>Who We Are</h2>
+    <p>
+      Protea Iron and Steel Group is a modern global metals and resources company
+      integrating mining, processing, logistics and international distribution
+      across key industrial markets.
+    </p>
 
-  <div class="cards">
-    <div class="card">
-      <img src="images/aluminum.jpg" alt="Aluminum">
-      <div class="card-content">
-        <h3>Aluminum</h3>
-        <p>High-purity aluminum for aerospace, medical and industrial applications.</p>
+    <div class="cards">
+      <div class="card aluminum">
+        <h3>Aluminum Processing</h3>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="images/energy.jpg" alt="Energy">
-      <div class="card-content">
-        <h3>Energy</h3>
-        <p>Supporting global energy infrastructure through advanced materials.</p>
+      <div class="card energy">
+        <h3>Energy & Resources</h3>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="images/infrastructure.jpg" alt="Infrastructure">
-      <div class="card-content">
-        <h3>Infrastructure</h3>
-        <p>Reliable steel and metal solutions for large-scale infrastructure.</p>
+      <div class="card infrastructure">
+        <h3>Infrastructure Supply</h3>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  © 2026 Protea Iron and Steel Group. All rights reserved.
+  © 2026 Protea Iron and Steel Group
 </footer>
 
 </body>
 </html>
+
 
 
 

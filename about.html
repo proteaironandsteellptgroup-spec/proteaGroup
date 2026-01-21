@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>About Us – Protea Iron and Steel Group</title>
+<div class="brand">
+  <img src="images/logo-protea.png" alt="Protea Iron and Steel Group Logo">
+  <span>Protea Iron and Steel Group</span>
+</div>
 
 <style>
 * {
@@ -122,6 +125,20 @@ footer {
     padding-left: 8vw;
   }
 }
+  .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;          /* logo 和文字间距 */
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.brand img {
+  height: 36px;       /* 控制 logo 大小 */
+  width: auto;
+}
+
 </style>
 </head>
 

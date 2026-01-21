@@ -14,31 +14,22 @@
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       color: #111;
-      line-height: 1.7;
+      line-height: 1.6;
     }
 
     /* ================= Header ================= */
-
     header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 64px;
-      background: rgba(0,0,0,0.85);
-      display: flex;
-      align-items: center;
-      z-index: 100;
-    }
-
-    .header-inner {
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 0 24px;
+      background: rgba(0,0,0,0.75);
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 0 32px;
+      z-index: 100;
     }
 
     .logo {
@@ -49,7 +40,6 @@
     .logo img {
       height: 40px;
       width: auto;
-      display: block;
     }
 
     nav a {
@@ -60,37 +50,30 @@
       font-weight: 500;
     }
 
-    nav a:hover {
-      opacity: 0.8;
-    }
-
-    /* ================= Hero ================= */
-
+    /* ================= Hero Video ================= */
     .hero {
-  margin-top: 64px;
-  width: 200%;
-  height: 75vh;       
-  min-height: 620px;  
-  position: relative;
-  overflow: hidden;
-  background: #000;
-}
-
+      position: relative;
+      width: 100%;
+      height: 75vh; /* 关键：高度变高，视频完整展示 */
+      min-height: 520px;
+      overflow: hidden;
+      margin-top: 64px; /* 给 header 让位 */
     }
 
     .hero video {
       position: absolute;
-      inset: 0;
+      top: 50%;
+      left: 50%;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: cover; /* 横向铺满，不变窄 */
+      transform: translate(-50%, -50%);
     }
 
-    .hero::after {
-      content: "";
+    .hero-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.35); /* 轻遮罩，不压视频 */
       z-index: 1;
     }
 
@@ -100,85 +83,76 @@
       height: 100%;
       display: flex;
       align-items: center;
-    }
-
-    .hero-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
+      padding-left: 8vw;
       color: #fff;
+      max-width: 900px;
     }
 
-    .hero-inner h1 {
-      font-size: 42px;
-      max-width: 720px;
+    .hero-content h1 {
+      font-size: clamp(36px, 4.5vw, 64px);
+      line-height: 1.15;
       margin-bottom: 16px;
     }
 
-    .hero-inner p {
+    .hero-content p {
       font-size: 18px;
-      max-width: 600px;
+      max-width: 640px;
       opacity: 0.9;
     }
 
     /* ================= Sections ================= */
-
     section {
-      padding: 100px 0;
+      padding: 96px 8vw;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* ================= Who We Are ================= */
-
-    .who h2 {
-      font-size: 32px;
+    h2 {
+      font-size: 36px;
       margin-bottom: 24px;
     }
 
-    .who p {
-      max-width: 720px;
-      font-size: 16px;
-      color: #333;
-    }
-
     /* ================= Cards ================= */
-
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 32px;
-      margin-top: 64px;
+      margin-top: 48px;
     }
 
     .card {
       position: relative;
-      min-height: 260px;
+      height: 280px;
       border-radius: 12px;
       overflow: hidden;
+      color: #fff;
+      display: flex;
+      align-items: flex-end;
+      padding: 32px;
       background-size: cover;
       background-position: center;
-      color: #fff;
-      padding: 32px;
     }
 
-    .card::after {
+    .card::before {
       content: "";
       position: absolute;
       inset: 0;
       background: rgba(0,0,0,0.45);
+    }
+
+    .card h3,
+    .card p {
+      position: relative;
       z-index: 1;
     }
 
     .card h3 {
-      position: relative;
-      z-index: 2;
+      margin: 0 0 8px 0;
       font-size: 22px;
+    }
+
+    .card p {
       margin: 0;
+      font-size: 14px;
+      opacity: 0.9;
     }
 
     .card.aluminum {
@@ -194,38 +168,30 @@
     }
 
     /* ================= Footer ================= */
-
     footer {
       background: #111;
       color: #aaa;
       text-align: center;
-      padding: 40px 24px;
+      padding: 40px;
       font-size: 14px;
     }
-
-    /* ================= Responsive ================= */
 
     @media (max-width: 900px) {
       .cards {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        height: 420px;
-      }
-
-      .hero-inner h1 {
-        font-size: 32px;
+      .hero-content {
+        padding-left: 6vw;
       }
     }
-
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="header-inner">
+  <!-- Header -->
+  <header>
     <div class="logo">
       <img src="images/logo-protea.png" alt="Protea Iron and Steel Group">
     </div>
@@ -235,56 +201,67 @@
       <a href="careers.html">Careers</a>
       <a href="contact.html">Contact</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<section class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="hero.mp4" type="video/mp4">
-  </video>
+  <!-- Hero -->
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="hero.mp4" type="video/mp4">
+    </video>
 
-  <div class="hero-content">
-    <div class="hero-inner">
-      <h1>Shaping a Responsible Future in Iron and Steel</h1>
-      <p>
-        A global integrated metals and mining group delivering
-        high-grade iron, steel and advanced materials worldwide.
-      </p>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div>
+        <h1>Shaping a Responsible Future in Iron and Steel</h1>
+        <p>
+          A global integrated metals and mining group delivering high-grade iron,
+          steel and advanced materials across international markets.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="who">
-  <div class="container">
+  <!-- Who We Are -->
+  <section>
     <h2>Who We Are</h2>
     <p>
       Protea Iron and Steel Group is a modern global metals and resources company
       integrating mining, processing, logistics and international distribution
-      across key industrial markets.
+      across key industrial markets worldwide.
     </p>
 
     <div class="cards">
       <div class="card aluminum">
-        <h3>Aluminum Processing</h3>
+        <div>
+          <h3>Aluminum Processing</h3>
+          <p>High-grade aluminum products for industrial and advanced manufacturing.</p>
+        </div>
       </div>
 
       <div class="card energy">
-        <h3>Energy & Resources</h3>
+        <div>
+          <h3>Energy & Resources</h3>
+          <p>Supporting energy-intensive industries with stable supply chains.</p>
+        </div>
       </div>
 
       <div class="card infrastructure">
-        <h3>Infrastructure Supply</h3>
+        <div>
+          <h3>Infrastructure Supply</h3>
+          <p>Materials and solutions for large-scale global infrastructure projects.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  © 2026 Protea Iron and Steel Group
-</footer>
+  <footer>
+    © 2026 Protea Iron and Steel Group
+  </footer>
 
 </body>
 </html>
+
 
 
 

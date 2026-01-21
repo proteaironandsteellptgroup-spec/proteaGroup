@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <div class="brand">
-  <img src="images/logo-protea.png" alt="Protea Iron and Steel Group Logo">
-  <span>Protea Iron and Steel Group</span>
-</div>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protea Iron and Steel Group</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -25,21 +24,26 @@
       left: 0;
       width: 100%;
       height: 64px;
-      background: rgba(0,0,0,0.75);
+      background: rgba(0, 0, 0, 0.75);
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 32px;
-      z-index: 100;
+      z-index: 1000;
     }
 
-    .logo {
+    .brand {
       display: flex;
       align-items: center;
+      gap: 12px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      white-space: nowrap;
     }
 
-    .logo img {
-      height: 40px;
+    .brand img {
+      height: 36px;
       width: auto;
     }
 
@@ -51,14 +55,18 @@
       font-weight: 500;
     }
 
+    nav a:hover {
+      opacity: 0.8;
+    }
+
     /* ================= Hero Video ================= */
     .hero {
       position: relative;
       width: 100%;
-      height: 85vh; /* 关键：高度变高，视频完整展示 */
-      min-height: 600px;
+      height: 90vh;           /* 视频高度加高 */
+      min-height: 720px;
+      margin-top: 64px;       /* 给 header 让位 */
       overflow: hidden;
-      margin-top: 64px; /* 给 header 让位 */
     }
 
     .hero video {
@@ -67,14 +75,14 @@
       left: 50%;
       width: 100%;
       height: 100%;
-      object-fit: cover; /* 横向铺满，不变窄 */
+      object-fit: cover;     /* 关键：不变窄 */
       transform: translate(-50%, -50%);
     }
 
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.35); /* 轻遮罩，不压视频 */
+      background: rgba(0, 0, 0, 0.35); /* 轻遮罩 */
       z-index: 1;
     }
 
@@ -85,20 +93,20 @@
       display: flex;
       align-items: center;
       padding-left: 8vw;
+      max-width: 960px;
       color: #fff;
-      max-width: 900px;
     }
 
     .hero-content h1 {
-      font-size: clamp(36px, 4.5vw, 64px);
+      font-size: clamp(38px, 4.8vw, 68px);
       line-height: 1.15;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .hero-content p {
       font-size: 18px;
-      max-width: 640px;
-      opacity: 0.9;
+      max-width: 680px;
+      opacity: 0.92;
     }
 
     /* ================= Sections ================= */
@@ -136,7 +144,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.45);
+      background: rgba(0, 0, 0, 0.45);
     }
 
     .card h3,
@@ -177,6 +185,7 @@
       font-size: 14px;
     }
 
+    /* ================= Responsive ================= */
     @media (max-width: 900px) {
       .cards {
         grid-template-columns: 1fr;
@@ -185,20 +194,11 @@
       .hero-content {
         padding-left: 6vw;
       }
-    }
-    .brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;          /* logo 和文字间距 */
-  color: #fff;
-  font-weight: 600;
-  font-size: 16px;
-}
 
-.brand img {
-  height: 36px;       /* 控制 logo 大小 */
-  width: auto;
-}
+      nav a {
+        margin-left: 16px;
+      }
+    }
   </style>
 </head>
 
@@ -206,15 +206,16 @@
 
   <!-- Header -->
   <header>
-    <div class="logo">
-      <img src="images/logo-protea.png" alt="Protea Iron and Steel Group">
+    <div class="brand">
+      <img src="images/logo-protea.png" alt="Protea Iron and Steel Group Logo">
+      <span>Protea Iron and Steel Group</span>
     </div>
+
     <nav>
       <a href="about.html">About us</a>
       <a href="operations.html">Operations</a>
-         <a href="contact.html">Contact us</a>
+      <a href="contact.html">Contact us</a>
       <a href="careers.html">Careers</a>
-   
     </nav>
   </header>
 
@@ -228,7 +229,7 @@
 
     <div class="hero-content">
       <div>
-        <h1>Shaping a Responsible Future in Metals and Resources </h1>
+        <h1>Shaping a Responsible Future in Metals and Resources</h1>
         <p>
           A global integrated metals and mining group delivering high-grade iron,
           steel and advanced materials across international markets.
@@ -270,12 +271,14 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     © 2026 Protea Iron and Steel Group
   </footer>
 
 </body>
 </html>
+
 
 
 

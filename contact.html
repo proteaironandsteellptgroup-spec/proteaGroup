@@ -22,7 +22,6 @@ header {
   width: 100%;
   height: 64px;
   background: rgba(0,0,0,0.85);
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,15 +36,13 @@ header {
   color: #fff;
   font-weight: 600;
   font-size: 16px;
-  white-space: nowrap;
 }
 
 .brand img {
   height: 36px;
-  width: auto;
 }
 
-header a {
+header nav a {
   color: #fff;
   text-decoration: none;
   margin-left: 24px;
@@ -112,16 +109,16 @@ h1 {
 
 .modal-content {
   background: #fff;
-  width: 100%;
   max-width: 560px;
-  border-radius: 16px;
+  width: 100%;
   padding: 36px;
+  border-radius: 16px;
   position: relative;
 }
 
 .modal-content label {
-  font-size: 14px;
   display: block;
+  font-size: 14px;
   margin-bottom: 6px;
 }
 
@@ -134,10 +131,6 @@ h1 {
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 15px;
-}
-
-.modal-content textarea {
-  resize: vertical;
 }
 
 .modal-content button {
@@ -164,10 +157,9 @@ h1 {
 <!-- ================= Header ================= -->
 <header>
   <div class="brand">
-    <img src="images/logo-protea.png" alt="Protea Iron and Steel Group Logo">
+    <img src="images/logo-protea.png" alt="Protea Iron and Steel Group">
     <span>Protea Iron and Steel Group</span>
   </div>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -197,7 +189,125 @@ Email:
 </div>
 </div>
 
-<!-- 下面办公室内容保持原样（已省略，与你提供的一致） -->
+<div class="office">
+<h2>Johannesburg, South Africa</h2>
+<p>
+Phone: <a onclick="openModal()">+27 11 589 4200</a><br>
+Email:
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=Johannesburg+South+Africa&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
+
+<div class="office">
+<h2>Durban, South Africa</h2>
+<p>
+Phone: <a onclick="openModal()">+27 31 301 8000</a><br>
+Email:
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=Durban+South+Africa&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
+
+<div class="office">
+<h2>Pretoria, South Africa</h2>
+<p>
+Phone: <a onclick="openModal()">+27 12 384 5600</a><br>
+Email:
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=Pretoria+South+Africa&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
+
+<!-- UNITED STATES -->
+<div class="office">
+<h2>New York, United States</h2>
+<p>
+Phone: <a onclick="openModal()">+1 929 494 9248</a><br>
+Email:
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=New+York+USA&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
+
+<div class="office">
+<h2>California, United States</h2>
+<p>
+Phone: <a onclick="openModal()">+1 415 782 6100</a><br>
+Email:
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=California+USA&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
+
+<div class="office">
+<h2>Washington, D.C., United States</h2>
+<p>
+Phone: <a onclick="openModal()">+1 202 735 8800</a><br>
+Email:
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=Washington+DC&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
+
+<!-- UNITED KINGDOM -->
+<div class="office">
+<h2>London, United Kingdom</h2>
+<p>
+Phone: <a onclick="openModal()">+44 20 7798 1700</a><br>
+Email:
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=London+UK&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
+
+<!-- GERMANY -->
+<div class="office">
+<h2>Berlin, Germany</h2>
+<p>
+Phone: <a onclick="openModal()">+49 30 8892 4400</a><br>
+Email:
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=Berlin+Germany&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
+
+<div class="office">
+<h2>Munich, Germany</h2>
+<p>
+Phone: <a onclick="openModal()">+49 89 5419 2200</a><br>
+Email:
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=Munich+Germany&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
 
 </div>
 
@@ -286,6 +396,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
 </body>
 </html>
+
 
 
 

@@ -316,56 +316,56 @@ footer {
   <div class="modal-content">
     <span class="close" onclick="closeModal()">×</span>
 
-    <form id="contactForm">
+    <form id="enquiryForm">
+      <!-- Enquiry type -->
       <label>Enquiry type</label>
-      <select name="enquiry" required>
+      <select name="enquiry_type" required>
         <option value="">What is the nature of your enquiry?</option>
-        <option>Commercial & Trading</option>
-        <option>Procurement / Supplier</option>
-        <option>Partnerships</option>
+        <option>General enquiry</option>
+        <option>Sales & trading</option>
+        <option>Logistics</option>
         <option>Careers</option>
-        <option>Media & Corporate</option>
+        <option>Partnership</option>
+      </select>
+
+      <!-- Company name (NEW) -->
+      <label>Company name</label>
+      <input type="text" name="company" placeholder="Your company name">
+
+      <!-- Name -->
+      <label>Name</label>
+      <input type="text" name="name" required>
+
+      <!-- Job title (NEW) -->
+      <label>Job title / Position</label>
+      <input type="text" name="job_title" placeholder="Your position">
+
+      <!-- Email -->
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <!-- Phone -->
+      <label>Phone</label>
+      <input type="text" name="phone">
+
+      <!-- Location -->
+      <label>Location</label>
+      <select name="location">
+        <option value="">Country / Region</option>
+        <option>United States</option>
+        <option>United Kingdom</option>
+        <option>Germany</option>
+        <option>South Africa</option>
+        <option>Australia</option>
+        <option>China</option>
+        <option>Japan</option>
+        <option>Middle East</option>
         <option>Other</option>
       </select>
 
-      <label>Name</label>
-      <input name="name" required>
-
-      <label>Email</label>
-      <input name="email" type="email" required>
-
-      <label>Phone</label>
-      <input name="phone">
-
-      <label>Location</label>
-      <select name="location" required>
-        <option value="">Country / Region</option>
-        <option>United States</option>
-        <option>Canada</option>
-        <option>United Kingdom</option>
-        <option>Germany</option>
-        <option>France</option>
-        <option>Netherlands</option>
-        <option>Italy</option>
-        <option>Spain</option>
-        <option>South Africa</option>
-        <option>Botswana</option>
-        <option>Namibia</option>
-        <option>Zambia</option>
-        <option>Australia</option>
-        <option>Chile</option>
-        <option>Brazil</option>
-        <option>Mexico</option>
-        <option>China</option>
-        <option>Japan</option>
-        <option>South Korea</option>
-        <option>India</option>
-        <option>Middle East</option>
-        <option>Other Region</option>
-      </select>
-
+      <!-- Relevant operation -->
       <label>Relevant operation</label>
-      <select name="operation" required>
+      <select name="operation">
         <option value="">Select</option>
         <option>Aluminum</option>
         <option>Steel</option>
@@ -373,18 +373,15 @@ footer {
         <option>Nickel</option>
         <option>Zinc</option>
         <option>Iron Ore</option>
-        <option>Manganese</option>
-        <option>Chromium</option>
-        <option>Rare Metals</option>
-        <option>Energy & Resources</option>
         <option>Logistics & Trading</option>
         <option>Infrastructure Supply</option>
-        <option>Corporate / Group Level</option>
       </select>
 
+      <!-- Message -->
       <label>Message</label>
       <textarea name="message" rows="4"></textarea>
 
+      <!-- Terms -->
       <label>
         <input type="checkbox" required>
         I accept the terms and conditions
@@ -394,7 +391,7 @@ footer {
     </form>
   </div>
 </div>
-
+  
 <script>
 function openModal() {
   document.getElementById("modal").classList.add("active");

@@ -54,6 +54,20 @@
       font-size: 14px;
       font-weight: 500;
     }
+    /* ===== Active navigation state ===== */
+nav a.active {
+  color: #f5d300;
+  font-weight: 600;
+}
+
+nav a.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #f5d300;
+  margin-top: 6px;
+  border-radius: 2px;
+}
 
     nav a:hover {
       opacity: 0.8;

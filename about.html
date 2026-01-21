@@ -61,21 +61,20 @@
     }
 
     /* ================= Page Hero ================= */
-  .page-hero {
-  height: 48vh;
-  display: flex;
-  align-items: center;
-  padding-left: 10%;
+    .page-hero {
+      height: 48vh;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      padding-left: 10%;
+      margin-top: 64px; /* 给 fixed header 让位 */
 
-  /* 背景图 + 遮罩 */
-  background:
-    linear-gradient(
-      rgba(0,0,0,0.45),
-      rgba(0,0,0,0.45)
-    ),
-    url("images/about-hero-bg.jpg") center/cover no-repeat;
-}
-
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.45),
+          rgba(0,0,0,0.45)
+        ),
+        url("images/about-hero-bg.jpg") center / cover no-repeat;
     }
 
     .page-hero h1 {

@@ -25,7 +25,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 32px;
-  z-index: 10;
+  z-index: 100;
 }
 
 .brand {
@@ -50,25 +50,32 @@ header a {
   font-size: 14px;
 }
 
-/* Hero */
+/* ================= Hero ================= */
 .hero {
   height: 60vh;
-  background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("images/careers-hero.jpg") center/cover no-repeat;
+  min-height: 420px;
+  margin-top: 64px;
   display: flex;
   align-items: center;
   padding-left: 10%;
   color: #fff;
+
+  /* 灰色遮罩 + 平铺背景图 */
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.45)
+    ),
+    url("images/careers-hero-bg.jpg") center / cover no-repeat;
 }
 
 .hero h1 {
   font-size: clamp(2.6rem, 5vw, 4rem);
-  max-width: 700px;
+  max-width: 720px;
   line-height: 1.1;
 }
 
-/* Section */
+/* ================= Section ================= */
 .section {
   padding: 120px 8vw;
 }
@@ -84,7 +91,7 @@ header a {
   color: #444;
 }
 
-/* Values */
+/* ================= Values ================= */
 .values {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -104,7 +111,7 @@ header a {
   font-size: 1.3rem;
 }
 
-/* Roles */
+/* ================= Roles ================= */
 .roles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -130,7 +137,7 @@ header a {
   color: #444;
 }
 
-/* CTA */
+/* ================= CTA ================= */
 .cta {
   margin-top: 100px;
   background: #111;
@@ -160,7 +167,7 @@ header a {
   font-size: 15px;
 }
 
-/* Footer */
+/* ================= Footer ================= */
 footer {
   background: #111;
   color: #aaa;
@@ -182,16 +189,14 @@ footer {
     <a href="about.html">About Us</a>
     <a href="operations.html">Operations</a>
     <a href="careers.html">Careers</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<!-- Hero -->
 <section class="hero">
   <h1>Building the Future of Global Metals and Resources</h1>
 </section>
 
-<!-- Culture -->
 <section class="section">
   <h2>Life at Protea</h2>
   <p>
@@ -204,105 +209,43 @@ footer {
   <div class="values">
     <div class="value">
       <h3>Safety First</h3>
-      <p>
-        We maintain the highest safety standards across all operations and
-        believe every incident is preventable.
-      </p>
+      <p>We maintain the highest safety standards across all operations.</p>
     </div>
-
     <div class="value">
       <h3>Global Collaboration</h3>
-      <p>
-        Our teams operate across Africa, Europe, and North America, fostering
-        diverse perspectives and shared expertise.
-      </p>
+      <p>Our teams operate across Africa, Europe, and North America.</p>
     </div>
-
     <div class="value">
       <h3>Technical Excellence</h3>
-      <p>
-        We invest continuously in engineering, processing technology, and
-        professional development.
-      </p>
+      <p>We invest continuously in engineering and technology.</p>
     </div>
-
     <div class="value">
       <h3>Long-Term Responsibility</h3>
-      <p>
-        Sustainability, environmental stewardship, and ethical governance
-        guide our decisions.
-      </p>
+      <p>Sustainability and ethical governance guide our decisions.</p>
     </div>
   </div>
 </section>
 
-<!-- Roles -->
 <section class="section">
   <h2>Career Opportunities</h2>
   <p>
     We recruit experienced professionals and emerging talent across a wide
-    range of technical, operational, and corporate disciplines.
+    range of disciplines.
   </p>
 
   <div class="roles">
-    <div class="role">
-      <h3>Mining & Operations</h3>
-      <p>
-        Mine planning, production, processing, maintenance, and site
-        operations roles across global assets.
-      </p>
-    </div>
-
-    <div class="role">
-      <h3>Engineering & Technical</h3>
-      <p>
-        Mechanical, electrical, metallurgical, and process engineering
-        positions supporting advanced operations.
-      </p>
-    </div>
-
-    <div class="role">
-      <h3>Logistics & Supply Chain</h3>
-      <p>
-        Global logistics, shipping, procurement, and supply chain
-        optimization roles.
-      </p>
-    </div>
-
-    <div class="role">
-      <h3>Commercial & Trading</h3>
-      <p>
-        Sales, marketing, trading, and market analysis roles serving
-        international customers.
-      </p>
-    </div>
-
-    <div class="role">
-      <h3>Corporate & Support Functions</h3>
-      <p>
-        Finance, legal, compliance, human resources, and corporate governance
-        positions.
-      </p>
-    </div>
-
-    <div class="role">
-      <h3>Graduate & Early Careers</h3>
-      <p>
-        Graduate programs, internships, and early-career pathways designed to
-        develop future leaders.
-      </p>
-    </div>
+    <div class="role"><h3>Mining & Operations</h3><p>Global site operations roles.</p></div>
+    <div class="role"><h3>Engineering & Technical</h3><p>Advanced engineering positions.</p></div>
+    <div class="role"><h3>Logistics & Supply Chain</h3><p>Global logistics optimization.</p></div>
+    <div class="role"><h3>Commercial & Trading</h3><p>International markets and sales.</p></div>
+    <div class="role"><h3>Corporate Functions</h3><p>Finance, HR, compliance roles.</p></div>
+    <div class="role"><h3>Graduate Programs</h3><p>Early-career development paths.</p></div>
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta">
   <h2>Join Our Global Team</h2>
-  <p>
-    If you are interested in opportunities at Protea Iron and Steel Group,
-    please contact our recruitment team. Qualified candidates will be
-    contacted for further discussion.
-  </p>
+  <p>Qualified candidates will be contacted for further discussion.</p>
   <a href="contact.html">Submit Your Enquiry</a>
 </section>
 
@@ -312,6 +255,7 @@ footer {
 
 </body>
 </html>
+
 
 
 

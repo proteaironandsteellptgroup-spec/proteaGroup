@@ -14,9 +14,8 @@
 </script>
 
 <style>
-  *, *::before, *::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -37,7 +36,6 @@ header {
   justify-content: space-between;
   padding: 0 32px;
   z-index: 100;
-  box-sizing: border-box;
 }
 
 .brand {
@@ -75,9 +73,7 @@ header a {
   box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
 
-.office h2 {
-  margin-top: 0;
-}
+.office h2 { margin-top: 0; }
 
 .badge {
   background: #111;
@@ -87,6 +83,8 @@ header a {
   border-radius: 999px;
   margin-left: 10px;
 }
+
+.office p { line-height: 1.7; }
 
 .office a {
   color: #111;
@@ -181,131 +179,133 @@ footer {
 </header>
 
 <div class="page">
-  <h1>Global Offices</h1>
+<h1>Global Offices</h1>
 
-  <!-- SOUTH AFRICA -->
-  <div class="office">
-    <h2>Cape Town, South Africa <span class="badge">Head Office</span></h2>
-    <p>
-      Phone:
-      <a onclick="openModal()">+1 616 255 9910</a> /
-      <a onclick="openModal()">+1 929 494 9248</a> /
-      <a onclick="openModal()">+27 21 418 9000</a><br>
-      Email:
-      <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
-      <a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
-    </p>
-    <div class="map">
-      <iframe src="https://maps.google.com/maps?q=Cape+Town+South+Africa&output=embed" width="100%" height="300"></iframe>
-    </div>
-  </div>
+<!-- SOUTH AFRICA -->
+<div class="office">
+<h2>Cape Town, South Africa <span class="badge">Head Office</span></h2>
+<p>
+<strong>Address:</strong><br>
+Protea Iron and Steel Group<br>
+2–7 Karee Road<br>
+Kraaifontein Industrial<br>
+Cape Town 7570<br>
+South Africa
+</p>
+<p>
+<strong>Phone:</strong>
+<a onclick="openModal()">+1 616 255 9910</a> /
+<a onclick="openModal()">+1 929 494 9248</a> /
+<a onclick="openModal()">+27 21 418 9000</a><br>
+<strong>Email:</strong>
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=2-7%20Karee%20Road%20Kraaifontein%20Cape%20Town&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
 
-  <div class="office">
-    <h2>Johannesburg, South Africa</h2>
-    <p>
-      Phone: <a onclick="openModal()">+27 11 589 4200</a><br>
-      Email:
-      <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
-      <a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
-    </p>
-    <div class="map">
-      <iframe src="https://maps.google.com/maps?q=Johannesburg+South+Africa&output=embed" width="100%" height="300"></iframe>
-    </div>
-  </div>
+<div class="office">
+<h2>Johannesburg, South Africa</h2>
+<p>
+<strong>Address:</strong><br>
+15 Atlas Road<br>
+Elandsfontein Industrial<br>
+Germiston 1406<br>
+South Africa
+</p>
+<p>
+<strong>Phone:</strong> <a onclick="openModal()">+27 11 589 4200</a><br>
+<strong>Email:</strong>
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=Germiston%201406%20South%20Africa&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
 
-  <div class="office">
-    <h2>Durban, South Africa</h2>
-    <p>
-      Phone: <a onclick="openModal()">+27 31 301 8000</a><br>
-      Email:
-      <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
-      <a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
-    </p>
-    <div class="map">
-      <iframe src="https://maps.google.com/maps?q=Durban+South+Africa&output=embed" width="100%" height="300"></iframe>
-    </div>
-  </div>
+<div class="office">
+<h2>Durban, South Africa</h2>
+<p>
+<strong>Address:</strong><br>
+18 Bayhead Road<br>
+Bayhead Industrial<br>
+Durban 4001<br>
+South Africa
+</p>
+<p>
+<strong>Phone:</strong> <a onclick="openModal()">+27 31 301 8000</a><br>
+<strong>Email:</strong>
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=Bayhead%20Road%20Durban&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
 
-  <!-- UNITED STATES -->
-  <div class="office">
-    <h2>New York, United States</h2>
-    <p>
-      Phone: <a onclick="openModal()">+1 929 494 9248</a><br>
-      Email:
-      <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
-      <a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
-    </p>
-    <div class="map">
-      <iframe src="https://maps.google.com/maps?q=New+York+USA&output=embed" width="100%" height="300"></iframe>
-    </div>
-  </div>
+<!-- UNITED STATES -->
+<div class="office">
+<h2>New York, United States</h2>
+<p>
+<strong>Address:</strong><br>
+250 Park Avenue, Suite 1900<br>
+New York, NY 10177<br>
+United States
+</p>
+<p>
+<strong>Phone:</strong> <a onclick="openModal()">+1 929 494 9248</a><br>
+<strong>Email:</strong>
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=250%20Park%20Avenue%20New%20York&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
 
-  <div class="office">
-    <h2>California, United States</h2>
-    <p>
-      Phone: <a onclick="openModal()">+1 415 782 6100</a><br>
-      Email:
-      <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
-      <a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
-    </p>
-    <div class="map">
-      <iframe src="https://maps.google.com/maps?q=California+USA&output=embed" width="100%" height="300"></iframe>
-    </div>
-  </div>
+<!-- UK -->
+<div class="office">
+<h2>London, United Kingdom</h2>
+<p>
+<strong>Address:</strong><br>
+One Canada Square<br>
+Canary Wharf<br>
+London E14 5AB<br>
+United Kingdom
+</p>
+<p>
+<strong>Phone:</strong> <a onclick="openModal()">+44 20 7798 1700</a><br>
+<strong>Email:</strong>
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=One%20Canada%20Square%20London&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
 
-  <div class="office">
-    <h2>Washington, D.C., United States</h2>
-    <p>
-      Phone: <a onclick="openModal()">+1 202 735 8800</a><br>
-      Email:
-      <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
-      <a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
-    </p>
-    <div class="map">
-      <iframe src="https://maps.google.com/maps?q=Washington+DC&output=embed" width="100%" height="300"></iframe>
-    </div>
-  </div>
-
-  <!-- UK -->
-  <div class="office">
-    <h2>London, United Kingdom</h2>
-    <p>
-      Phone: <a onclick="openModal()">+44 20 7798 1700</a><br>
-      Email:
-      <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
-      <a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
-    </p>
-    <div class="map">
-      <iframe src="https://maps.google.com/maps?q=London+UK&output=embed" width="100%" height="300"></iframe>
-    </div>
-  </div>
-
-  <!-- GERMANY -->
-  <div class="office">
-    <h2>Berlin, Germany</h2>
-    <p>
-      Phone: <a onclick="openModal()">+49 30 8892 4400</a><br>
-      Email:
-      <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
-      <a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
-    </p>
-    <div class="map">
-      <iframe src="https://maps.google.com/maps?q=Berlin+Germany&output=embed" width="100%" height="300"></iframe>
-    </div>
-  </div>
-
-  <div class="office">
-    <h2>Munich, Germany</h2>
-    <p>
-      Phone: <a onclick="openModal()">+49 89 5419 2200</a><br>
-      Email:
-      <a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
-      <a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
-    </p>
-    <div class="map">
-      <iframe src="https://maps.google.com/maps?q=Munich+Germany&output=embed" width="100%" height="300"></iframe>
-    </div>
-  </div>
+<!-- GERMANY -->
+<div class="office">
+<h2>Berlin, Germany</h2>
+<p>
+<strong>Address:</strong><br>
+Friedrichstraße 123<br>
+10117 Berlin<br>
+Germany
+</p>
+<p>
+<strong>Phone:</strong> <a onclick="openModal()">+49 30 8892 4400</a><br>
+<strong>Email:</strong>
+<a onclick="openModal()">proteaironandsteellptgroup@gmail.com</a> /
+<a onclick="openModal()">proteaironandsteellptgroup@outlook.com</a>
+</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=Friedrichstrasse%20123%20Berlin&output=embed" width="100%" height="300"></iframe>
+</div>
+</div>
 
 </div>
 
@@ -317,56 +317,35 @@ footer {
     <span class="close" onclick="closeModal()">×</span>
 
     <form id="enquiryForm">
-      <!-- Enquiry type -->
-      <label>Enquiry type</label>
-      <select name="enquiry_type" required>
-        <option value="">What is the nature of your enquiry?</option>
-        <option>General enquiry</option>
-        <option>Sales & trading</option>
-        <option>Logistics</option>
-        <option>Careers</option>
-        <option>Partnership</option>
-      </select>
-
-      <!-- Company name (NEW) -->
       <label>Company name</label>
-      <input type="text" name="company" placeholder="Your company name">
+      <input name="company">
 
-      <!-- Name -->
       <label>Name</label>
-      <input type="text" name="name" required>
+      <input name="name" required>
 
-      <!-- Job title (NEW) -->
       <label>Job title / Position</label>
-      <input type="text" name="job_title" placeholder="Your position">
+      <input name="job_title">
 
-      <!-- Email -->
       <label>Email</label>
       <input type="email" name="email" required>
 
-      <!-- Phone -->
       <label>Phone</label>
-      <input type="text" name="phone">
+      <input name="phone">
 
-      <!-- Location -->
       <label>Location</label>
       <select name="location">
-        <option value="">Country / Region</option>
         <option>United States</option>
         <option>United Kingdom</option>
         <option>Germany</option>
         <option>South Africa</option>
         <option>Australia</option>
-        <option>China</option>
-        <option>Japan</option>
+        <option>Asia</option>
         <option>Middle East</option>
         <option>Other</option>
       </select>
 
-      <!-- Relevant operation -->
       <label>Relevant operation</label>
       <select name="operation">
-        <option value="">Select</option>
         <option>Aluminum</option>
         <option>Steel</option>
         <option>Copper</option>
@@ -377,21 +356,14 @@ footer {
         <option>Infrastructure Supply</option>
       </select>
 
-      <!-- Message -->
       <label>Message</label>
       <textarea name="message" rows="4"></textarea>
-
-      <!-- Terms -->
-      <label>
-        <input type="checkbox" required>
-        I accept the terms and conditions
-      </label>
 
       <button type="submit">Submit</button>
     </form>
   </div>
 </div>
-  
+
 <script>
 function openModal() {
   document.getElementById("modal").classList.add("active");
@@ -400,20 +372,13 @@ function closeModal() {
   document.getElementById("modal").classList.remove("active");
 }
 
-document.getElementById("contactForm").addEventListener("submit", function(e) {
+document.getElementById("enquiryForm").addEventListener("submit", function(e){
   e.preventDefault();
-
-  emailjs.sendForm(
-    "service_8lisu6o",
-    "template_zw1ffvb",
-    this
-  ).then(() => {
+  emailjs.sendForm("service_8lisu6o","template_zw1ffvb",this)
+  .then(()=>{
     alert("Thank you for your enquiry. Our team will contact you shortly.");
     this.reset();
     closeModal();
-  }, (error) => {
-    alert("Submission failed. Please try again later.");
-    console.error(error);
   });
 });
 </script>

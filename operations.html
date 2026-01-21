@@ -51,11 +51,15 @@ header a {
 }
 
 /* ================= Hero ================= */
+/* 这里是本次唯一“功能性修改”的地方 */
 .hero {
   height: 60vh;
   background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("images/operations-hero.jpg") center/cover no-repeat;
+    linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.55)
+    ),
+    url("images/operations-bg.jpg") center / cover repeat;
   display: flex;
   align-items: center;
   padding-left: 10%;
@@ -133,7 +137,7 @@ header a {
   box-shadow: 0 20px 50px rgba(0,0,0,0.25);
 }
 
-/* Background Images */
+/* ================= Background Images ================= */
 .aluminum { background-image: url("images/aluminum.jpg"); }
 .steel { background-image: url("images/steel.jpg"); }
 .copper { background-image: url("images/copper.jpg"); }
@@ -200,89 +204,18 @@ footer {
   <!-- ================= 12 Operation Cards ================= -->
   <div class="cards">
 
-    <div class="card aluminum">
-      <div class="card-content">
-        <h3>Aluminum</h3>
-        <p>Military-grade and aerospace-grade aluminum processing and supply.</p>
-      </div>
-    </div>
-
-    <div class="card steel">
-      <div class="card-content">
-        <h3>Steel</h3>
-        <p>High-strength structural and specialty steel products.</p>
-      </div>
-    </div>
-
-    <div class="card copper">
-      <div class="card-content">
-        <h3>Copper</h3>
-        <p>Refined copper for energy, electronics, and infrastructure.</p>
-      </div>
-    </div>
-
-    <div class="card nickel">
-      <div class="card-content">
-        <h3>Nickel</h3>
-        <p>Battery-grade and industrial nickel supply.</p>
-      </div>
-    </div>
-
-    <div class="card zinc">
-      <div class="card-content">
-        <h3>Zinc</h3>
-        <p>Corrosion-resistant zinc for industrial applications.</p>
-      </div>
-    </div>
-
-    <div class="card ironore">
-      <div class="card-content">
-        <h3>Iron Ore</h3>
-        <p>High-quality iron ore for global steelmakers.</p>
-      </div>
-    </div>
-
-    <div class="card manganese">
-      <div class="card-content">
-        <h3>Manganese</h3>
-        <p>Critical alloying material for steel production.</p>
-      </div>
-    </div>
-
-    <div class="card chromium">
-      <div class="card-content">
-        <h3>Chromium</h3>
-        <p>Stainless steel and specialty alloy applications.</p>
-      </div>
-    </div>
-
-    <div class="card rare">
-      <div class="card-content">
-        <h3>Rare Metals</h3>
-        <p>Strategic metals supporting advanced manufacturing.</p>
-      </div>
-    </div>
-
-    <div class="card energy">
-      <div class="card-content">
-        <h3>Energy & Resources</h3>
-        <p>Energy solutions supporting mining and processing operations.</p>
-      </div>
-    </div>
-
-    <div class="card logistics">
-      <div class="card-content">
-        <h3>Logistics & Trading</h3>
-        <p>Integrated logistics and global metals trading.</p>
-      </div>
-    </div>
-
-    <div class="card infrastructure">
-      <div class="card-content">
-        <h3>Infrastructure Supply</h3>
-        <p>Materials supporting large-scale infrastructure projects.</p>
-      </div>
-    </div>
+    <div class="card aluminum"><div class="card-content"><h3>Aluminum</h3><p>Military-grade and aerospace-grade aluminum processing and supply.</p></div></div>
+    <div class="card steel"><div class="card-content"><h3>Steel</h3><p>High-strength structural and specialty steel products.</p></div></div>
+    <div class="card copper"><div class="card-content"><h3>Copper</h3><p>Refined copper for energy, electronics, and infrastructure.</p></div></div>
+    <div class="card nickel"><div class="card-content"><h3>Nickel</h3><p>Battery-grade and industrial nickel supply.</p></div></div>
+    <div class="card zinc"><div class="card-content"><h3>Zinc</h3><p>Corrosion-resistant zinc for industrial applications.</p></div></div>
+    <div class="card ironore"><div class="card-content"><h3>Iron Ore</h3><p>High-quality iron ore for global steelmakers.</p></div></div>
+    <div class="card manganese"><div class="card-content"><h3>Manganese</h3><p>Critical alloying material for steel production.</p></div></div>
+    <div class="card chromium"><div class="card-content"><h3>Chromium</h3><p>Stainless steel and specialty alloy applications.</p></div></div>
+    <div class="card rare"><div class="card-content"><h3>Rare Metals</h3><p>Strategic metals supporting advanced manufacturing.</p></div></div>
+    <div class="card energy"><div class="card-content"><h3>Energy & Resources</h3><p>Energy solutions supporting mining and processing operations.</p></div></div>
+    <div class="card logistics"><div class="card-content"><h3>Logistics & Trading</h3><p>Integrated logistics and global metals trading.</p></div></div>
+    <div class="card infrastructure"><div class="card-content"><h3>Infrastructure Supply</h3><p>Materials supporting large-scale infrastructure projects.</p></div></div>
 
   </div>
 </section>
@@ -293,6 +226,7 @@ footer {
 
 </body>
 </html>
+
 
 
 

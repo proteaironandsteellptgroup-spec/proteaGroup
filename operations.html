@@ -7,168 +7,218 @@
 
 <style>
   *, *::before, *::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #f4f6f7;
-  color: #111;
-}
-
-/* ================= Header ================= */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 64px;
-  background: rgba(0,0,0,0.85);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 32px;
-  z-index: 10;
-  box-sizing: border-box;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #fff;
-  font-weight: 600;
-  font-size: 16px;
-  white-space: nowrap;
-}
-
-.brand img {
-  height: 36px;
-  width: auto;
-}
-
-header a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 14px;
-}
-
-/* ================= Hero ================= */
-.hero {
-  height: 60vh;
-  background:
-    linear-gradient(
-      rgba(0,0,0,0.55),
-      rgba(0,0,0,0.55)
-    ),
-    url("images/operations-bg.jpg") center / cover repeat;
-  display: flex;
-  align-items: center;
-  padding-left: 10%;
-  color: #fff;
-}
-
-.hero h1 {
-  font-size: clamp(2.6rem, 5vw, 4rem);
-  max-width: 700px;
-  line-height: 1.1;
-}
-
-/* ================= Section ================= */
-.section {
-  padding: 120px 8vw;
-}
-
-.section h2 {
-  font-size: 2.4rem;
-  margin-bottom: 24px;
-}
-
-.section p {
-  max-width: 720px;
-  line-height: 1.8;
-  color: #444;
-}
-
-/* ================= Cards ================= */
-.cards {
-  margin-top: 80px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 32px;
-}
-
-.card {
-  position: relative;
-  height: 260px;
-  border-radius: 14px;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  color: #fff;
-  display: flex;
-  align-items: flex-end;
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-}
-
-.card-content {
-  position: relative;
-  padding: 24px;
-}
-
-.card h3 {
-  margin: 0;
-  font-size: 1.3rem;
-}
-
-.card p {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-}
-
-/* ================= Background Images ================= */
-.aluminum { background-image: url("images/ops-aluminum.jpg"); }
-.steel { background-image: url("images/steel.jpg"); }
-.copper { background-image: url("images/copper.jpg"); }
-.nickel { background-image: url("images/nickel.jpg"); }
-.zinc { background-image: url("images/zinc.jpg"); }
-.ironore { background-image: url("images/iron-ore.jpg"); }
-.manganese { background-image: url("images/manganese.jpg"); }
-.chromium { background-image: url("images/chromium.jpg"); }
-.rare { background-image: url("images/rare-metals.jpg"); }
-.energy { background-image: url("images/energy.jpg"); }
-.logistics { background-image: url("images/logistics.jpg"); }
-.infrastructure { background-image: url("images/infrastructure.jpg"); }
-
-/* ================= Footer ================= */
-footer {
-  background: #111;
-  color: #aaa;
-  text-align: center;
-  padding: 40px;
-}
-
-/* ================= Responsive ================= */
-@media (max-width: 768px) {
-  .hero {
-    padding-left: 8vw;
+    box-sizing: border-box;
   }
-}
+
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f4f6f7;
+    color: #111;
+  }
+
+  /* ================= Header ================= */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 64px;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    z-index: 1000;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .brand img {
+    height: 36px;
+    width: auto;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  header a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 14px;
+  }
+
+  /* ================= Hamburger ================= */
+  .menu-btn {
+    display: none;
+    width: 28px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .menu-btn span {
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+  }
+
+  /* ================= Mobile Menu ================= */
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    padding: 96px 32px;
+  }
+
+  .mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+  /* ================= Hero ================= */
+  .hero {
+    height: 60vh;
+    margin-top: 64px;
+    background:
+      linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+      ),
+      url("images/operations-bg.jpg") center / cover repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    color: #fff;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    max-width: 700px;
+    line-height: 1.1;
+  }
+
+  /* ================= Section ================= */
+  .section {
+    padding: 120px 8vw;
+  }
+
+  .section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 24px;
+  }
+
+  .section p {
+    max-width: 720px;
+    line-height: 1.8;
+    color: #444;
+  }
+
+  /* ================= Cards ================= */
+  .cards {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+  }
+
+  .card {
+    position: relative;
+    height: 260px;
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+  }
+
+  .card-content {
+    position: relative;
+    padding: 24px;
+  }
+
+  .card h3 {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  }
+
+  /* ================= Background Images ================= */
+  .aluminum { background-image: url("images/ops-aluminum.jpg"); }
+  .steel { background-image: url("images/steel.jpg"); }
+  .copper { background-image: url("images/copper.jpg"); }
+  .nickel { background-image: url("images/nickel.jpg"); }
+  .zinc { background-image: url("images/zinc.jpg"); }
+  .ironore { background-image: url("images/iron-ore.jpg"); }
+  .manganese { background-image: url("images/manganese.jpg"); }
+  .chromium { background-image: url("images/chromium.jpg"); }
+  .rare { background-image: url("images/rare-metals.jpg"); }
+  .energy { background-image: url("images/energy.jpg"); }
+  .logistics { background-image: url("images/logistics.jpg"); }
+  .infrastructure { background-image: url("images/infrastructure.jpg"); }
+
+  /* ================= Footer ================= */
+  footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 40px;
+  }
+
+  /* ================= Responsive ================= */
+  @media (max-width: 900px) {
+    nav {
+      display: none;
+    }
+
+    .menu-btn {
+      display: flex;
+    }
+
+    .hero {
+      padding-left: 8vw;
+    }
+  }
 </style>
 </head>
 
@@ -180,6 +230,7 @@ footer {
     <img src="images/logo-protea.png" alt="Protea Iron and Steel Group Logo">
     <span>Protea Iron and Steel Group</span>
   </div>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About us</a>
@@ -187,7 +238,22 @@ footer {
     <a href="careers.html">Careers</a>
     <a href="contact.html">Contact us</a>
   </nav>
+
+  <div class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
+
+<!-- ================= Mobile Menu ================= -->
+<div class="mobile-menu" id="mobileMenu" onclick="toggleMenu()">
+  <a href="index.html">Home</a>
+  <a href="about.html">About us</a>
+  <a href="operations.html">Operations</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact us</a>
+</div>
 
 <!-- ================= Hero ================= -->
 <section class="hero">
@@ -205,9 +271,7 @@ footer {
     sectors worldwide.
   </p>
 
-  <!-- ================= 12 Operation Cards ================= -->
   <div class="cards">
-
     <div class="card aluminum"><div class="card-content"><h3>Aluminum</h3><p>Military-grade and aerospace-grade aluminum processing and supply.</p></div></div>
     <div class="card steel"><div class="card-content"><h3>Steel</h3><p>High-strength structural and specialty steel products.</p></div></div>
     <div class="card copper"><div class="card-content"><h3>Copper</h3><p>Refined copper for energy, electronics, and infrastructure.</p></div></div>
@@ -220,13 +284,18 @@ footer {
     <div class="card energy"><div class="card-content"><h3>Energy & Resources</h3><p>Energy solutions supporting mining and processing operations.</p></div></div>
     <div class="card logistics"><div class="card-content"><h3>Logistics & Trading</h3><p>Integrated logistics and global metals trading.</p></div></div>
     <div class="card infrastructure"><div class="card-content"><h3>Infrastructure Supply</h3><p>Materials supporting large-scale infrastructure projects.</p></div></div>
-
   </div>
 </section>
 
 <footer>
   © 2026 Protea Iron and Steel Group
 </footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>

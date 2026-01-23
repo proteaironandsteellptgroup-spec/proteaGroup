@@ -48,6 +48,10 @@
       width: auto;
     }
 
+    nav {
+      display: flex;
+    }
+
     nav a {
       color: #fff;
       text-decoration: none;
@@ -60,6 +64,44 @@
       opacity: 0.8;
     }
 
+    /* ================= Hamburger Button ================= */
+    .menu-btn {
+      display: none;
+      width: 28px;
+      height: 20px;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .menu-btn span {
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+    }
+
+    /* ================= Mobile Menu ================= */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 999;
+      display: none;
+      flex-direction: column;
+      padding: 96px 32px;
+    }
+
+    .mobile-menu a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+
+    .mobile-menu.active {
+      display: flex;
+    }
+
     /* ================= Page Hero ================= */
     .page-hero {
       height: 48vh;
@@ -67,7 +109,7 @@
       display: flex;
       align-items: center;
       padding-left: 10%;
-      margin-top: 64px; /* 给 fixed header 让位 */
+      margin-top: 64px;
 
       background:
         linear-gradient(
@@ -134,6 +176,14 @@
 
     /* ================= Responsive ================= */
     @media (max-width: 900px) {
+      nav {
+        display: none;
+      }
+
+      .menu-btn {
+        display: flex;
+      }
+
       .about-card {
         padding: 48px 32px;
       }
@@ -160,7 +210,21 @@
       <a href="careers.html">Careers</a>
       <a href="contact.html">Contact us</a>
     </nav>
+
+    <div class="menu-btn" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" onclick="toggleMenu()">
+    <a href="index.html">Home</a>
+    <a href="operations.html">Operations</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html">Contact us</a>
+  </div>
 
   <!-- Page Hero -->
   <section class="page-hero">
@@ -222,6 +286,12 @@
   <footer>
     © 2026 Protea Iron and Steel Group
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("active");
+    }
+  </script>
 
 </body>
 </html>

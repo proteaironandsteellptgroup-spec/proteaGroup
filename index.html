@@ -21,21 +21,22 @@ body {
 header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 64px;
-  background: rgba(0,0,0,0.85);
-  color: #fff;
+  background: rgba(0,0,0,0.75);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 32px;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
+  color: #fff;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -51,7 +52,7 @@ nav a {
   font-size: 14px;
 }
 
-/* 汉堡按钮 */
+/* ===== Hamburger ===== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -65,7 +66,7 @@ nav a {
   background: #fff;
 }
 
-/* ================= Mobile Menu ================= */
+/* ===== Mobile Menu ===== */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -74,7 +75,7 @@ nav a {
   width: 100%;
   background: rgba(0,0,0,0.95);
   flex-direction: column;
-  z-index: 99;
+  z-index: 999;
 }
 
 .mobile-menu a {
@@ -90,31 +91,45 @@ nav a {
 
 /* ================= Hero ================= */
 .hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
   margin-top: 64px;
-  height: 70vh;
-  background:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url("images/index-hero.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  padding-left: 10%;
-  color: #fff;
 }
 
-.hero h1 {
-  font-size: clamp(2.6rem, 5vw, 4rem);
+.hero video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding-left: 10%;
   max-width: 760px;
 }
 
-/* ================= Sections ================= */
-.section {
-  padding: 120px 8vw;
+.hero-content h1 {
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  line-height: 1.1;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 32px;
+.hero-content p {
+  margin-top: 16px;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 /* ================= Footer ================= */
@@ -133,6 +148,10 @@ footer {
 
   .hamburger {
     display: flex;
+  }
+
+  .hero-content {
+    padding: 0 8vw;
   }
 }
 </style>
@@ -161,7 +180,6 @@ footer {
   </div>
 </header>
 
-<!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html">Home</a>
   <a href="about.html">About Us</a>
@@ -170,12 +188,21 @@ footer {
   <a href="contact.html">Contact</a>
 </div>
 
+<!-- ===== Hero ===== -->
 <section class="hero">
-  <h1>Building a Global Metals Enterprise</h1>
-</section>
+  <video autoplay muted loop playsinline>
+    <source src="hero.mp4" type="video/mp4">
+  </video>
 
-<section class="section">
-  <!-- 原有首页内容不动 -->
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Shaping a Responsible Future in Metals and Resources</h1>
+    <p>
+      A global integrated metals and mining group delivering high-grade iron,
+      steel and advanced materials across international markets.
+    </p>
+  </div>
 </section>
 
 <footer>

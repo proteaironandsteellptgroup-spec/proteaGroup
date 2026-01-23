@@ -25,7 +25,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 32px;
-  z-index: 100;
+  z-index: 1000;
   box-sizing: border-box;
 }
 
@@ -44,11 +44,53 @@ header {
   width: auto;
 }
 
+nav {
+  display: flex;
+}
+
 header a {
   color: #fff;
   text-decoration: none;
   margin-left: 24px;
   font-size: 14px;
+}
+
+/* ================= Hamburger ================= */
+.menu-btn {
+  display: none;
+  width: 28px;
+  height: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* ================= Mobile Menu ================= */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  padding: 96px 32px;
+}
+
+.mobile-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.mobile-menu.active {
+  display: flex;
 }
 
 /* ================= Hero ================= */
@@ -154,7 +196,7 @@ header a {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
-  z-index: 999;
+  z-index: 1100;
   align-items: center;
   justify-content: center;
 }
@@ -210,6 +252,21 @@ footer {
   text-align: center;
   padding: 40px;
 }
+
+/* ================= Responsive ================= */
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .hero {
+    padding-left: 8vw;
+  }
+}
 </style>
 </head>
 
@@ -220,6 +277,7 @@ footer {
     <img src="images/logo-protea.png" alt="Protea Iron and Steel Group Logo">
     <span>Protea Iron and Steel Group</span>
   </div>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About us</a>
@@ -227,7 +285,22 @@ footer {
     <a href="careers.html">Careers</a>
     <a href="contact.html">Contact us</a>
   </nav>
+
+  <div class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
+
+<!-- ================= Mobile Menu ================= -->
+<div class="mobile-menu" id="mobileMenu" onclick="toggleMenu()">
+  <a href="index.html">Home</a>
+  <a href="about.html">About us</a>
+  <a href="operations.html">Operations</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact us</a>
+</div>
 
 <section class="hero">
   <h1>Building the Future of Global Metals and Resources</h1>
@@ -291,6 +364,9 @@ footer {
 </div>
 
 <script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
 function openModal() {
   document.getElementById("modal").classList.add("active");
 }

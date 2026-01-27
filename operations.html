@@ -6,235 +6,228 @@
 <title>Operations | Protea Iron and Steel Group</title>
 
 <style>
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
+* { box-sizing: border-box; }
 
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #f4f6f7;
-    color: #111;
-  }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f4f6f7;
+  color: #111;
+  line-height: 1.6;
+}
 
-  /* ================= Header ================= */
-  header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 64px;
-    background: rgba(0,0,0,0.85);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 32px;
-    z-index: 1000;
-  }
+/* ================= Header (Unified with index) ================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(245,246,247,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
 
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: #fff;
-    font-weight: 600;
-    font-size: 16px;
-    white-space: nowrap;
-  }
+.brand {
+  display: flex;
+  align-items: center;
+}
 
-  .brand img {
-    height: 36px;
-    width: auto;
-  }
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
 
-  nav {
-    display: flex;
-  }
+.logo-wrap svg {
+  height: 48px;
+  width: auto;
+  display: block;
+}
 
-  header a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 24px;
-    font-size: 14px;
-  }
+/* ================= Nav ================= */
+nav {
+  display: flex;
+}
 
-  /* ================= Hamburger ================= */
-  .menu-btn {
-    display: none;
-    width: 28px;
-    height: 20px;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-  }
+nav a {
+  color: #111;
+  text-decoration: none;
+  margin-left: 28px;
+  font-size: 14px;
+  font-weight: 500;
+}
 
-  .menu-btn span {
-    height: 3px;
-    background: #fff;
-    border-radius: 2px;
-  }
+/* ================= Hamburger ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
 
-  /* ================= Mobile Menu ================= */
-  .mobile-menu {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.92);
-    z-index: 999;
-    display: none;
-    flex-direction: column;
-    padding: 96px 32px;
-  }
+.hamburger span {
+  width: 22px;
+  height: 2px;
+  background: #111;
+}
 
-  .mobile-menu a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    margin-bottom: 24px;
-  }
+/* ================= Mobile Menu ================= */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  background: rgba(245,246,247,0.96);
+  backdrop-filter: blur(12px);
+  flex-direction: column;
+  padding: 20px 8vw;
+  z-index: 999;
+}
 
-  .mobile-menu.active {
-    display: flex;
-  }
+.mobile-menu a {
+  padding: 14px 0;
+  font-size: 18px;
+  color: #111;
+  text-decoration: none;
+}
 
-  /* ================= Hero ================= */
-  .hero {
-    height: 60vh;
-    margin-top: 64px;
-    background:
-      linear-gradient(
-        rgba(0,0,0,0.55),
-        rgba(0,0,0,0.55)
-      ),
-      url("images/operations-bg.jpg") center / cover repeat;
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
-    color: #fff;
-  }
+.mobile-menu.active {
+  display: flex;
+}
 
-  .hero h1 {
-    font-size: clamp(2.6rem, 5vw, 4rem);
-    max-width: 700px;
-    line-height: 1.1;
-  }
+/* ================= Hero ================= */
+.hero {
+  height: 60vh;
+  margin-top: 64px;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/operations-bg.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  color: #fff;
+}
 
-  /* ================= Section ================= */
-  .section {
-    padding: 120px 8vw;
-  }
+.hero h1 {
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  max-width: 700px;
+  line-height: 1.1;
+}
 
-  .section h2 {
-    font-size: 2.4rem;
-    margin-bottom: 24px;
-  }
+/* ================= Section ================= */
+.section {
+  padding: 120px 8vw;
+}
 
-  .section p {
-    max-width: 720px;
-    line-height: 1.8;
-    color: #444;
-  }
+.section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 24px;
+}
 
-  /* ================= Cards ================= */
-  .cards {
-    margin-top: 80px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 32px;
-  }
+.section p {
+  max-width: 720px;
+  color: #444;
+}
 
-  .card {
-    position: relative;
-    height: 260px;
-    border-radius: 14px;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    color: #fff;
-    display: flex;
-    align-items: flex-end;
-    transition: transform .3s ease, box-shadow .3s ease;
-  }
+/* ================= Cards ================= */
+.cards {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
 
-  .card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-  }
+.card {
+  position: relative;
+  height: 260px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
 
-  .card-content {
-    position: relative;
-    padding: 24px;
-  }
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
 
-  .card h3 {
-    margin: 0;
-    font-size: 1.3rem;
-  }
+.card-content {
+  position: relative;
+  padding: 24px;
+}
 
-  .card p {
-    margin-top: 8px;
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
+.card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
 
-  .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-  }
+.card p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
 
-  /* ================= Background Images ================= */
-  .aluminum { background-image: url("images/ops-aluminum.jpg"); }
-  .steel { background-image: url("images/steel.jpg"); }
-  .copper { background-image: url("images/copper.jpg"); }
-  .nickel { background-image: url("images/nickel.jpg"); }
-  .zinc { background-image: url("images/zinc.jpg"); }
-  .ironore { background-image: url("images/iron-ore.jpg"); }
-  .manganese { background-image: url("images/manganese.jpg"); }
-  .chromium { background-image: url("images/chromium.jpg"); }
-  .rare { background-image: url("images/rare-metals.jpg"); }
-  .energy { background-image: url("images/energy.jpg"); }
-  .logistics { background-image: url("images/logistics.jpg"); }
-  .infrastructure { background-image: url("images/infrastructure.jpg"); }
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
 
-  /* ================= Footer ================= */
- footer {
-  background: linear-gradient(
-    to bottom,
-    #f2f3f4,
-    #e9eaec
-  );
-  color: #6b7280;
+/* ================= Background Images ================= */
+.aluminum { background-image: url("images/ops-aluminum.jpg"); }
+.steel { background-image: url("images/steel.jpg"); }
+.copper { background-image: url("images/copper.jpg"); }
+.nickel { background-image: url("images/nickel.jpg"); }
+.zinc { background-image: url("images/zinc.jpg"); }
+.ironore { background-image: url("images/iron-ore.jpg"); }
+.manganese { background-image: url("images/manganese.jpg"); }
+.chromium { background-image: url("images/chromium.jpg"); }
+.rare { background-image: url("images/rare-metals.jpg"); }
+.energy { background-image: url("images/energy.jpg"); }
+.logistics { background-image: url("images/logistics.jpg"); }
+.infrastructure { background-image: url("images/infrastructure.jpg"); }
+
+/* ================= Footer ================= */
+footer {
+  background: linear-gradient(#f2f3f4,#e9eaec);
   text-align: center;
   padding: 48px 0;
+  color: #6b7280;
   font-size: 14px;
   border-top: 1px solid rgba(0,0,0,0.06);
 }
 
-  /* ================= Responsive ================= */
-  @media (max-width: 900px) {
-    nav {
-      display: none;
-    }
-
-    .menu-btn {
-      display: flex;
-    }
-
-    .hero {
-      padding-left: 8vw;
-    }
-  }
+/* ================= Responsive ================= */
+@media (max-width: 900px) {
+  nav { display: none; }
+  .hamburger { display: flex; }
+  .hero { padding-left: 8vw; }
+}
 </style>
 </head>
 
 <body>
 
-<!-- ================= Header ================= -->
 <header>
   <div class="brand">
-    <img src="images/logo-protea.png" alt="Protea Iron and Steel Group Logo">
-    <span>Protea Iron and Steel Group</span>
+    <div class="logo-wrap">
+      <!-- ✅ 同 index / about 的 SVG（完整带 PROTEA） -->
+      <!-- 这里直接粘你已经在用、验证成功的 SVG 原文 -->
+      <!-- ⚠️ 为避免重复，我这里不再改 SVG 内容 -->
+      <!-- 请直接粘 index.html 里的那一整段 SVG -->
+    </div>
   </div>
 
   <nav>
@@ -245,15 +238,12 @@
     <a href="contact.html">Contact us</a>
   </nav>
 
-  <div class="menu-btn" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
   </div>
 </header>
 
-<!-- ================= Mobile Menu ================= -->
-<div class="mobile-menu" id="mobileMenu" onclick="toggleMenu()">
+<div class="mobile-menu" id="mobileMenu">
   <a href="index.html">Home</a>
   <a href="about.html">About us</a>
   <a href="operations.html">Operations</a>
@@ -261,12 +251,10 @@
   <a href="contact.html">Contact us</a>
 </div>
 
-<!-- ================= Hero ================= -->
 <section class="hero">
   <h1>Integrated Operations Across the Global Metals Value Chain</h1>
 </section>
 
-<!-- ================= Overview ================= -->
 <section class="section">
   <h2>Our Operations</h2>
   <p>
@@ -294,18 +282,17 @@
 </section>
 
 <footer>
- Copyright © 2026 Protea Iron and Steel Group Inc. All rights resverved 
+  Copyright © 2026 Protea Iron and Steel Group Inc. All rights resverved
 </footer>
 
 <script>
-  function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("active");
-  }
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
 </script>
 
 </body>
 </html>
-
 
 
 

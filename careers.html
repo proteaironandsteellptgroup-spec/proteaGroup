@@ -270,6 +270,61 @@ footer {
   .hamburger { display: flex; }
   .hero { padding-left: 8vw; }
 }
+  /* ================= Careers Role Cards Background ================= */
+.roles .role {
+  position: relative;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.roles .role::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+.roles .role > * {
+  position: relative;
+  z-index: 1;
+}
+.roles .role:hover::before {
+  background: rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease;
+}
+
+/* ================= Individual Role Images ================= */
+
+/* 1. Mining & Operations */
+.roles .role:nth-child(1) {
+  background-image: url("images/careers-mining.jpg");
+}
+
+/* 2. Engineering */
+.roles .role:nth-child(2) {
+  background-image: url("images/careers-engineering.jpg");
+}
+
+/* 3. Logistics */
+.roles .role:nth-child(3) {
+  background-image: url("images/careers-logistics.jpg");
+}
+
+/* 4. Commercial */
+.roles .role:nth-child(4) {
+  background-image: url("images/careers-commercial.jpg");
+}
+
+/* 5. Corporate */
+.roles .role:nth-child(5) {
+  background-image: url("images/careers-corporate.jpg");
+}
+
+/* 6. Graduates */
+.roles .role:nth-child(6) {
+  background-image: url("images/careers-graduates.jpg");
+}
 </style>
 </head>
 

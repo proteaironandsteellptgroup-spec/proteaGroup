@@ -160,7 +160,7 @@ nav a {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
-  z-index: 1100;
+  z-index: 9999;
   align-items: center;
   justify-content: center;
 }
@@ -222,6 +222,10 @@ footer {
 @media (max-width: 900px) {
   nav { display: none; }
   .hamburger { display: flex; }
+}
+iframe {
+position: relative;
+z-index: 0;
 }
 </style>
 </head>
@@ -422,9 +426,11 @@ function toggleMenu() {
 }
 function openModal() {
   document.getElementById("modal").classList.add("active");
+  document.body.style.overflow = "hidden";
 }
 function closeModal() {
   document.getElementById("modal").classList.remove("active");
+  document.body.style.overflow = "";
 }
 
 document.getElementById("enquiryForm").addEventListener("submit", function(e){

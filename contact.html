@@ -419,7 +419,58 @@ Germany
 <footer>
 Copyright © 2026 Protea Iron and Steel Group Inc. All rights resverved
 </footer>
+  <!-- ================= Modal ================= -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
 
+    <form id="enquiryForm">
+      <label>Company name</label>
+      <input name="company">
+
+      <label>Name</label>
+      <input name="name" required>
+
+      <label>Job title / Position</label>
+      <input name="job_title">
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Phone</label>
+      <input name="phone">
+
+      <label>Location</label>
+      <select name="location">
+        <option>United States</option>
+        <option>United Kingdom</option>
+        <option>Germany</option>
+        <option>South Africa</option>
+        <option>Australia</option>
+        <option>Asia</option>
+        <option>Middle East</option>
+        <option>Other</option>
+      </select>
+
+      <label>Relevant operation</label>
+      <select name="operation">
+        <option>Aluminum</option>
+        <option>Steel</option>
+        <option>Copper</option>
+        <option>Nickel</option>
+        <option>Zinc</option>
+        <option>Iron Ore</option>
+        <option>Logistics & Trading</option>
+        <option>Infrastructure Supply</option>
+      </select>
+
+      <label>Message</label>
+      <textarea name="message" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
 <script>
 function toggleMenu() {
   document.getElementById("mobileMenu").classList.toggle("active");

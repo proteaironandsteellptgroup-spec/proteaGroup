@@ -152,6 +152,46 @@ nav a {
   border-radius: 14px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
+  /* ================= Life at Protea Card Backgrounds ================= */
+
+.values .value {
+  position: relative;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.values .value::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+}
+
+.values .value > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Individual Life Images */
+
+.values .value:nth-child(1) {
+  background-image: url("images/life-safety.jpg");
+}
+
+.values .value:nth-child(2) {
+  background-image: url("images/life-global-collaboration.jpg");
+}
+
+.values .value:nth-child(3) {
+  background-image: url("images/life-technical-excellence.jpg");
+}
+
+.values .value:nth-child(4) {
+  background-image: url("images/life-long-term-responsibility.jpg");
+}
 
 /* ================= Roles ================= */
 .roles {

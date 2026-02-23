@@ -33,7 +33,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 32px 0 16px; /* 左边 padding 减小，确保 logo 更靠左 */
+  padding: 0 32px 0 16px;
   z-index: 1000;
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
@@ -42,7 +42,7 @@ header {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-left: -16px; /* 负值补偿，让 logo 完全贴左边缘 */
+  margin-left: -16px;
 }
 
 .logo-wrap {
@@ -54,7 +54,7 @@ header {
 .logo-wrap svg {
   height: 48px;
   display: block;
-  margin-left: 0; /* 确保无额外左边距 */
+  margin-left: 0;
 }
 
 nav { display: flex; }
@@ -67,7 +67,7 @@ nav a {
   font-weight: 500;
 }
 
-/* 汉堡菜单 */
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -289,7 +289,7 @@ h2 {
   margin-top: 8px;
 }
 
-/* 动画 */
+
 @keyframes goldFlow {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
@@ -300,7 +300,6 @@ h2 {
   100% { left: 140%; }
 }
 
-/* ================= 右下角 Corporate Headquarters ================= */
 .address-wrapper {
   position: fixed;
   bottom: 32px;
@@ -370,7 +369,7 @@ footer {
 /* Responsive */
 @media (max-width: 900px) {
   header { padding: 0 24px 0 12px; }
-  .brand { margin-left: -12px; } /* 小屏时进一步贴左 */
+  .brand { margin-left: -12px; } 
   nav { display: none; }
   .hamburger { display: flex; }
   .cards { grid-template-columns: 1fr; gap: 24px; }
@@ -458,7 +457,7 @@ footer {
   <div class="hero-content">
     <div>
       <h1>Shaping a Responsible Future in Metals and Resources</h1>
-      <p>A global integrated metals and mining group delivering high-grade iron.</p>
+      <p>A global integrated metals and mining group delivering high-grade Metals.</p>
     </div>
   </div>
 </section>
@@ -493,7 +492,7 @@ Protea is committed to delivering high-performance, low-carbon metal solutions t
 
 </section>
 
-<!-- 右下角 Corporate Headquarters -->
+<!-- Corporate Headquarters -->
 <div class="address-wrapper" onclick="window.location.href='contact.html'">
   <div class="address-card">
     <h4>Corporate Headquarters</h4>
@@ -548,7 +547,7 @@ cards.forEach(card => {
   });
 });
 
-/* 数字滚动动画 */
+
 const numbers = document.querySelectorAll(".stat-number");
 
 const animateNumber = (num) => {
